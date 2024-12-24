@@ -8,6 +8,7 @@
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<!-- META UNTUK GOOGLE MAX:100-140 -->
 	<meta name="description" content=""/> 
+	<meta name="keyword" content=""/> 
 
 	<!-- META UNTUK FACEBOOK -->
 	<meta property="og:title" content="">
@@ -27,13 +28,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CMuli:400,700" rel="stylesheet">
 
 	<!-- Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="{{ asset('public/frontend/css/bootstrap.min.css') }}" />
+	<link type="text/css" rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" />
 
 	<!-- Font Awesome Icon -->
-	<link rel="stylesheet" href="{{ asset('public/frontend/css/font-awesome.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css') }}">
 
 	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}" />
+	<link type="text/css" rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -63,7 +64,7 @@
 
 					<!-- logo -->
 					<div class="nav-logo">
-						<a href="index.html" class="logo"><img src="{{ asset('public/frontend/img/logo.png')}}" alt=""></a>
+						<a href="index.html" class="logo"><img src="{{ asset('frontend/img/logo.png')}}" alt=""></a>
 					</div>
 					<!-- /logo -->
 

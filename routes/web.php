@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +16,8 @@
 
 Auth::routes();
 
-Route::get('/', 'BlogController@index');
+Route::get('/', 'LandingpageController@index');
+Route::get('/blog', 'BlogController@index');
 /*Route::get('/isi_post', function(){
 	return view('blog.isi_post');
 });*/
@@ -26,7 +30,7 @@ Route::get('/cari','BlogController@cari')->name('blog.cari');
 
 
 Route::group(['middleware' => 'auth'], function(){
-	Route::get('/home', 'HomeController@index')->name('home');
+	Route::get('/dasboard', 'HomeController@index')->name('dasboard');
 	Route::resource('/category', 'CategoryController');
 	Route::resource('/tag', 'TagController');
 
