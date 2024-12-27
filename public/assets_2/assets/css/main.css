@@ -837,20 +837,55 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-.hero {
+/* .hero {
   width: 100%;
   min-height: 75vh;
   position: relative;
   padding: 60px 0;
   display: flex;
   align-items: center;
-  background: url("../img/hero-bg.jpg") top left;
+  background: url("../img/macrohitungstruktur-banner3.png") top left;
   background-size: cover;
+} */
+.hero {
+  /* width: 100%; */
+  min-height: 75vh;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #0A6CAD, #0A6CAD);
+  color: white;
 }
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero .btn-primary {
+  background-color: #ffffff;
+  color: #007bff;
+  border: none;
+  padding: 10px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  /* transition: background-color 0.3s ease; */
+}
+
+.hero .btn-primary:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  /* background: color-mix(in srgb, var(--background-color), transparent 30%); */
   position: absolute;
   bottom: 0;
   top: 0;
