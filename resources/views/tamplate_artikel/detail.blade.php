@@ -21,15 +21,26 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assets_3/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets_3/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets_3/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="assets_3/assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets_3/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets_3/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="{{ asset('assets_3/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_3/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_3/assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_3/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_3/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_3/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets_3/assets/css/main.css" rel="stylesheet">
+    {{-- <link href="{{ asset('assets_3/assets/css/main.css') }}" rel="stylesheet"> --}}
+
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ asset('assets_2/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_2/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_2/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_2/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_2/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="{{ asset('assets_2/assets/css/main.css') }}" rel="stylesheet">
 
     <!-- =======================================================
   * Template Name: UpConstruction - v1.3.0
@@ -80,12 +91,13 @@
                         <li class="dropdown"><a href="#"><span>Jasa Layanan</span> <i
                                     class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>
-                                <li><a href="{{ url('/layanan-detail') }}">Bangunan Gedung</a></li>
-                                <li><a href="/layanan-detail">Rumah Tinggal/Ruko</a></li>
-                                <li><a href="/layanan-detail">Bangunan Gudang</a></li>
-                                <li><a href="/layanan-detail">Assesment</a></li>
-                                <li><a href="/layanan-detail">BIM, Tekla, RAB</a></li>
-                                <li><a href="/layanan-detail">DED Arsitek, MEP</a></li>
+                                <li><a href="{{ url('/layanan-detail/bangunan-gedung') }}">Bangunan Gedung</a></li>
+                                <li><a href="{{ url('/layanan-detail/rumah-tinggal-ruko') }}">Rumah Tinggal/Ruko</a>
+                                </li>
+                                <li><a href="{{ url('/layanan-detail/bangunan-gudang') }}">Bangunan Gudang</a></li>
+                                <li><a href="{{ url('/layanan-detail/assesment') }}">Assesment</a></li>
+                                <li><a href="{{ url('/layanan-detail/bim-tekla-rab') }}">BIM, Tekla, RAB</a></li>
+                                <li><a href="{{ url('/layanan-detail/ded-arsitek-mep') }}">DED Arsitek, MEP</a></li>
                             </ul>
                         </li>
                         <li><a href="#contact">Pricing</a></li>
@@ -103,7 +115,7 @@
     <main id="main">
 
         <!-- ======= Breadcrumbs ======= -->
-        <div class="breadcrumbs d-flex align-items-center"
+        {{-- <div class="breadcrumbs d-flex align-items-center"
             style="background-image: url('assets_3/assets/img/breadcrumbs-bg.jpg');">
             <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
@@ -114,11 +126,22 @@
                 </ol>
 
             </div>
-        </div><!-- End Breadcrumbs -->
+        </div><!-- End Breadcrumbs --> --}}
+        <div class="page-title" data-aos="fade">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">Artikel Detail</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">Artikel Details</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
 
         <!-- ======= Blog Details Section ======= -->
         <section id="blog" class="blog">
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
+            {{-- <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                 <div class="row g-5">
 
@@ -537,6 +560,27 @@
                     </div>
                 </div>
 
+            </div> --}}
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="mb-3">{{ $artikel['title'] }}</h1>
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="me-3"><i class="bi bi-person"></i> {{ $artikel['author'] }}</span>
+                            <span class="me-3"><i class="bi bi-folder2"></i> {{ $artikel['category'] }}</span>
+                            <span><i class="bi bi-calendar"></i> {{ $artikel['date'] }}</span>
+                        </div>
+                        <img src="{{ asset($artikel['image']) }}" class="img-fluid mb-3"
+                            alt="{{ $artikel['title'] }}">
+                        {{-- <p>{{ $artikel['content'] }}</p> --}}
+                        @isset($artikel['content'])
+                            <p>{{ $artikel['content'] }}</p>
+                        @else
+                            <p>Content not available.</p>
+                        @endisset
+
+                    </div>
+                </div>
             </div>
         </section><!-- End Blog Details Section -->
 
@@ -544,6 +588,88 @@
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
+
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-6">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                        <form action="forms/newsletter.php" method="post" class="php-email-form">
+                            <div class="newsletter-form"><input type="email" name="email"><input type="submit"
+                                    value="Subscribe"></div>
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="d-flex align-items-center">
+                        <span class="sitename">BizLand</span>
+                    </a>
+                    <div class="footer-contact pt-3">
+                        <p>A108 Adam Street</p>
+                        <p>New York, NY 535022</p>
+                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+                        <p><strong>Email:</strong> <span>info@example.com</span></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h4>Follow Us</h4>
+                    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                    <div class="social-links d-flex">
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">BizLand</strong> <span>All Rights Reserved</span>
+            </p>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
+                    href=“https://themewagon.com>ThemeWagon
+            </div>
+        </div>
+
+    </footer>
+    {{-- <footer id="footer" class="footer">
 
         <div class="footer-content position-relative">
             <div class="container">
@@ -635,7 +761,7 @@
             </div>
         </div>
 
-    </footer>
+    </footer> --}}
     <!-- End Footer -->
 
     <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
@@ -644,16 +770,28 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
-    <script src="assets_3/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('assets_3/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets_3/assets/vendor/aos/aos.js') }}"></script>
+    <script src="{{ asset('assets_3/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('assets_3/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets_3/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets_3/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets_3/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+    <script src="{{ asset('assets_3/assets/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ asset('assets_3/assets/js/main.js') }}"></script>
+
+
+
+    {{-- <script src="assets_3/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets_3/assets/vendor/aos/aos.js"></script>
     <script src="assets_3/assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets_3/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets_3/assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets_3/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets_3/assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets_3/assets/vendor/php-email-form/validate.js"></script> --}}
 
     <!-- Template Main JS File -->
-    <script src="assets_3/assets/js/main.js"></script>
+    {{-- <script src="assets_3/assets/js/main.js"></script> --}}
 
 </body>
 

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\LayananController;
+use App\Http\Controllers\ArtikelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +21,12 @@ Auth::routes();
 Route::get('/', 'LandingpageController@index');
 // Route::get('/blog', 'BlogController@index');
 Route::get('/artikel', 'ArtikelController@index');
-Route::get('/artikel-details', 'ArtikelController@detail');
+// Route::get('/artikel-details', 'ArtikelController@detail');
+Route::get('/artikel-detail/{slug}', [ArtikelController::class, 'detail'])->name('artikel.detail');
 
 Route::get('/layanan', 'LayananController@index');
-Route::get('/layanan-detail', 'LayananController@detail');
+// Route::get('/layanan-detail', 'LayananController@detail');
+Route::get('/layanan-detail/{slug}', [LayananController::class, 'detail'])->name('layanan.detail');
 
 Route::get('/portfolio', 'PortfolioController@index');
 /*Route::get('/isi_post', function(){

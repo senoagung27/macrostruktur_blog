@@ -22,10 +22,47 @@ class LayananController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function detail()
-     {
-         return view('layanan.detail');
-     }
+    //  public function detail()
+    //  {
+    //      return view('layanan.detail');
+    //  }
+    public function detail($slug)
+{
+    // Data layanan berdasarkan slug
+    $layanan = [
+        'bangunan-gedung' => [
+            'title' => 'Bangunan Gedung',
+            'description' => 'Detail informasi mengenai Bangunan Gedung.',
+        ],
+        'rumah-tinggal-ruko' => [
+            'title' => 'Rumah Tinggal/Ruko',
+            'description' => 'Detail informasi mengenai Rumah Tinggal/Ruko.',
+        ],
+        'bangunan-gudang' => [
+            'title' => 'Bangunan Gudang',
+            'description' => 'Detail informasi mengenai Bangunan Gudang.',
+        ],
+        'assesment' => [
+            'title' => 'Assesment',
+            'description' => 'Detail informasi mengenai Assesment.',
+        ],
+        'bim-tekla-rab' => [
+            'title' => 'BIM, Tekla, RAB',
+            'description' => 'Detail informasi mengenai BIM, Tekla, RAB.',
+        ],
+        'ded-arsitek-mep' => [
+            'title' => 'DED Arsitek, MEP',
+            'description' => 'Detail informasi mengenai DED Arsitek, MEP.',
+        ],
+    ];
+
+    // Cek apakah slug ada dalam data layanan
+    if (!array_key_exists($slug, $layanan)) {
+        abort(404); // Jika tidak ditemukan, tampilkan halaman 404
+    }
+
+    return view('layanan.detail', ['layanan' => $layanan[$slug]]);
+}
     public function create()
     {
         //

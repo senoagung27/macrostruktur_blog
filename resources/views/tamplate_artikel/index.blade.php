@@ -134,12 +134,12 @@
                         <li class="dropdown"><a href="#"><span>Jasa Layanan</span> <i
                                     class="bi bi-chevron-down toggle-dropdown"></i></a>
                                     <ul>
-                                        <li><a href="{{ url('/layanan-detail') }}">Bangunan Gedung</a></li>
-                                        <li><a href="/layanan-detail">Rumah Tinggal/Ruko</a></li>
-                                        <li><a href="/layanan-detail">Bangunan Gudang</a></li>
-                                        <li><a href="/layanan-detail">Assesment</a></li>
-                                        <li><a href="/layanan-detail">BIM, Tekla, RAB</a></li>
-                                        <li><a href="/layanan-detail">DED Arsitek, MEP</a></li>
+                                        <li><a href="{{ url('/layanan-detail/bangunan-gedung') }}">Bangunan Gedung</a></li>
+                                        <li><a href="{{ url('/layanan-detail/rumah-tinggal-ruko') }}">Rumah Tinggal/Ruko</a></li>
+                                        <li><a href="{{ url('/layanan-detail/bangunan-gudang') }}">Bangunan Gudang</a></li>
+                                        <li><a href="{{ url('/layanan-detail/assesment') }}">Assesment</a></li>
+                                        <li><a href="{{ url('/layanan-detail/bim-tekla-rab') }}">BIM, Tekla, RAB</a></li>
+                                        <li><a href="{{ url('/layanan-detail/ded-arsitek-mep') }}">DED Arsitek, MEP</a></li>
                                     </ul>
                         </li>
                         <li><a href="#contact">Pricing</a></li>
@@ -157,7 +157,7 @@
     <main id="main">
 
         <!-- ======= Breadcrumbs ======= -->
-        <div class="breadcrumbs d-flex align-items-center"
+        {{-- <div class="breadcrumbs d-flex align-items-center"
             style="background-image: url('assets_3/assets/img/breadcrumbs-bg.jpg');">
             <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
@@ -168,52 +168,79 @@
                 </ol>
 
             </div>
-        </div><!-- End Breadcrumbs -->
+        </div><!-- End Breadcrumbs --> --}}
+        <div class="page-title" data-aos="fade">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">Macro Engineering Studio - Jasa Perencanaan &amp; Perhitungan Struktur Bangunan
+                </h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">Portfolio</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
 
         <!-- ======= Blog Section ======= -->
         <section id="blog" class="blog">
             <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                 <div class="row gy-4 posts-list">
-
+                    @foreach ($artikel as $slug => $details)
                     <div class="col-xl-4 col-md-6">
                         <div class="post-item position-relative h-100">
 
                             <div class="post-img position-relative overflow-hidden">
                                 <img src="assets_3/assets/img/blog/blog-1.jpg" class="img-fluid" alt="">
-                                <span class="post-date">December 12</span>
+                                {{-- <span class="post-date">December 12</span> --}}
+                                <span class="post-date">{{ \Carbon\Carbon::parse($details['date'])->format('F j') }}</span>
                             </div>
 
                             <div class="post-content d-flex flex-column">
 
-                                <h3 class="post-title">Dolorum optio tempore voluptas dignissimos cumque fuga qui
-                                    quibusdam quia</h3>
+                                {{-- <h3 class="post-title">Dolorum optio tempore voluptas dignissimos cumque fuga qui
+                                    quibusdam quia</h3> --}}
+                                    <h3 class="post-title">{{ $details['title'] }}</h3>
 
                                 <div class="meta d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        <i class="bi bi-person"></i> <span class="ps-2">John Doe</span>
+                                        {{-- <i class="bi bi-person"></i> <span class="ps-2">John Doe</span> --}}
+                                        <i class="bi bi-person"></i> <span class="ps-2">{{ $details['author'] }}</span>
                                     </div>
                                     <span class="px-3 text-black-50">/</span>
                                     <div class="d-flex align-items-center">
-                                        <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
+                                        {{-- <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span> --}}
+                                        <i class="bi bi-folder2"></i> <span class="ps-2">{{ $details['category'] }}</span>
                                     </div>
                                 </div>
 
-                                <p>
+                                {{-- <p>
                                     Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi
                                     praesentium. Aliquam et
                                     laboriosam eius aut nostrum quidem aliquid dicta.
-                                </p>
+                                </p> --}}
+                                {{-- <p>
+                                    {{ Str::limit($artikel['content'], 150) }}
+                                </p> --}}
+                                @isset($artikel['content'])
+    {{ Str::limit($artikel['content'], 150) }}
+@else
+    <p>Content not available.</p>
+@endisset
+
+                                
 
                                 <hr>
 
-                                <a href="{{ url('/blog-details') }}" class="readmore stretched-link"><span>Read More</span><i
+                                <a href="{{ url('/artikel-detail/' . $slug) }}" class="readmore stretched-link"><span>Read More</span><i
                                         class="bi bi-arrow-right"></i></a>
 
                             </div>
 
                         </div>
                     </div><!-- End post list item -->
+                    @endforeach
 
                     <div class="col-xl-4 col-md-6">
                         <div class="post-item position-relative h-100">
@@ -428,7 +455,7 @@
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
+    {{-- <footer id="footer" class="footer">
 
         <div class="footer-content position-relative">
             <div class="container">
@@ -520,6 +547,88 @@
             </div>
         </div>
 
+    </footer> --}}
+    <footer id="footer" class="footer">
+
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-6">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                        <form action="forms/newsletter.php" method="post" class="php-email-form">
+                            <div class="newsletter-form"><input type="email" name="email"><input type="submit"
+                                    value="Subscribe"></div>
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="d-flex align-items-center">
+                        <span class="sitename">BizLand</span>
+                    </a>
+                    <div class="footer-contact pt-3">
+                        <p>A108 Adam Street</p>
+                        <p>New York, NY 535022</p>
+                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+                        <p><strong>Email:</strong> <span>info@example.com</span></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h4>Follow Us</h4>
+                    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                    <div class="social-links d-flex">
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">BizLand</strong> <span>All Rights Reserved</span>
+            </p>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
+                    href=“https://themewagon.com>ThemeWagon
+            </div>
+        </div>
+
     </footer>
     <!-- End Footer -->
 
@@ -539,6 +648,20 @@
 
     <!-- Template Main JS File -->
     <script src="assets_3/assets/js/main.js"></script>
+
+     <!-- Vendor JS Files -->
+     <script src="assets_2/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+     <script src="assets_2/assets/vendor/php-email-form/validate.js"></script>
+     <script src="assets_2/assets/vendor/aos/aos.js"></script>
+     <script src="assets_2/assets/vendor/glightbox/js/glightbox.min.js"></script>
+     <script src="assets_2/assets/vendor/waypoints/noframework.waypoints.js"></script>
+     <script src="assets_2/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+     <script src="assets_2/assets/vendor/swiper/swiper-bundle.min.js"></script>
+     <script src="assets_2/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+     <script src="assets_2/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+ 
+     <!-- Main JS File -->
+     <script src="assets_2/assets/js/main.js"></script>
 
 </body>
 

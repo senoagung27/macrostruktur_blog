@@ -49,8 +49,10 @@
 
         .content {
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
+            align-items: center; /* Vertically centers items */
+            justify-content: center; /* Horizontally centers items */
+            height: 100vh; /* Makes the container take full viewport height */
+            margin-bottom: 0; /* Removes any existing margin that might cause misalignment */
         }
 
         .text-container {
@@ -141,13 +143,13 @@
                     <li class="dropdown"><a href="#"><span>Jasa Layanan</span> <i
                                 class="bi bi-chevron-down toggle-dropdown"></i></a>
                                 <ul>
-                                  <li><a href="{{ url('/layanan-detail') }}">Bangunan Gedung</a></li>
-                                  <li><a href="/layanan-detail">Rumah Tinggal/Ruko</a></li>
-                                  <li><a href="/layanan-detail">Bangunan Gudang</a></li>
-                                  <li><a href="/layanan-detail">Assesment</a></li>
-                                  <li><a href="/layanan-detail">BIM, Tekla, RAB</a></li>
-                                  <li><a href="/layanan-detail">DED Arsitek, MEP</a></li>
-                              </ul>
+                                    <li><a href="{{ url('/layanan-detail/bangunan-gedung') }}">Bangunan Gedung</a></li>
+                                    <li><a href="{{ url('/layanan-detail/rumah-tinggal-ruko') }}">Rumah Tinggal/Ruko</a></li>
+                                    <li><a href="{{ url('/layanan-detail/bangunan-gudang') }}">Bangunan Gudang</a></li>
+                                    <li><a href="{{ url('/layanan-detail/assesment') }}">Assesment</a></li>
+                                    <li><a href="{{ url('/layanan-detail/bim-tekla-rab') }}">BIM, Tekla, RAB</a></li>
+                                    <li><a href="{{ url('/layanan-detail/ded-arsitek-mep') }}">DED Arsitek, MEP</a></li>
+                                </ul>
                     </li>
                     <li><a href="#contact">Pricing</a></li>
                     <li><a href="#contact">Contact</a></li>

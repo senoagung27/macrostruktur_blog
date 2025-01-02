@@ -20,14 +20,14 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assets_2/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets_2/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets_2/assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets_2/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets_2/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="{{ asset('assets_2/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_2/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_2/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_2/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_2/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
     <!-- Main CSS File -->
-    <link href="assets_2/assets/css/main.css" rel="stylesheet">
+    <link href="{{ asset('assets_2/assets/css/main.css') }}" rel="stylesheet">
 
     <!-- =======================================================
   * Template Name: BizLand
@@ -77,14 +77,14 @@
                         <li><a href="{{ url('/artikel') }}">Artikel</a></li>
                         <li class="dropdown"><a href="#"><span>Jasa Layanan</span> <i
                                     class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="{{ url('/layanan-detail') }}">Bangunan Gedung</a></li>
-                                <li><a href="/layanan-detail">Rumah Tinggal/Ruko</a></li>
-                                <li><a href="/layanan-detail">Bangunan Gudang</a></li>
-                                <li><a href="/layanan-detail">Assesment</a></li>
-                                <li><a href="/layanan-detail">BIM, Tekla, RAB</a></li>
-                                <li><a href="/layanan-detail">DED Arsitek, MEP</a></li>
-                            </ul>
+                                    <ul>
+                                        <li><a href="{{ url('/layanan-detail/bangunan-gedung') }}">Bangunan Gedung</a></li>
+                                        <li><a href="{{ url('/layanan-detail/rumah-tinggal-ruko') }}">Rumah Tinggal/Ruko</a></li>
+                                        <li><a href="{{ url('/layanan-detail/bangunan-gudang') }}">Bangunan Gudang</a></li>
+                                        <li><a href="{{ url('/layanan-detail/assesment') }}">Assesment</a></li>
+                                        <li><a href="{{ url('/layanan-detail/bim-tekla-rab') }}">BIM, Tekla, RAB</a></li>
+                                        <li><a href="{{ url('/layanan-detail/ded-arsitek-mep') }}">DED Arsitek, MEP</a></li>
+                                    </ul>
                         </li>
                         <li><a href="#contact">Pricing</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -120,7 +120,7 @@
 
                 <div class="row gy-4">
 
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    {{-- <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="services-list">
                             <a href="#" class="active">Web Design</a>
                             <a href="#">Software Development</a>
@@ -133,17 +133,19 @@
                         <p>Nam voluptatem quasi numquam quas fugiat ex temporibus quo est. Quia aut quam quod facere ut
                             non occaecati ut aut. Nesciunt mollitia illum tempore corrupti sed eum reiciendis. Maxime
                             modi rerum.</p>
-                    </div>
+                    </div> --}}
 
-                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                        <img src="assets_2/assets/img/services.jpg" alt="" class="img-fluid services-img">
-                        <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas
-                        </h3>
-                        <p>
+                    <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+                        <img src="{{ asset('assets_2/assets/img/services.jpg') }}" alt="" class="img-fluid services-img">
+                        {{-- <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas
+                        </h3> --}}
+                        <h1>{{ $layanan['title'] }}</h1>
+                        {{-- <p>
                             Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et
                             doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis
                             fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
-                        </p>
+                        </p> --}}
+                        <p>{{ $layanan['description'] }}</p>
                         <ul>
                             <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span>
                             </li>
@@ -270,18 +272,18 @@
     </div>
 
     <!-- Vendor JS Files -->
-    <script src="assets_2/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets_2/assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets_2/assets/vendor/aos/aos.js"></script>
-    <script src="assets_2/assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets_2/assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets_2/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets_2/assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets_2/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets_2/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="{{ asset('assets_2/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets_2/assets/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ asset('assets_2/assets/vendor/aos/aos.js') }}"></script>
+    <script src="{{ asset('assets_2/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('assets_2/assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
+    <script src="{{ asset('assets_2/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+    <script src="{{ asset('assets_2/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets_2/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets_2/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
 
     <!-- Main JS File -->
-    <script src="assets_2/assets/js/main.js"></script>
+    <script src="{{ asset('assets_2/assets/js/main.js') }}"></script>
 
 </body>
 
