@@ -29,6 +29,36 @@
     <!-- Main CSS File -->
     <link href="assets_2/assets/css/main.css" rel="stylesheet">
 
+    <style>
+        /* Gambar Full Height */
+        .full-height-img {
+            height: 100% !important;
+            /* Sesuaikan dengan kontainer */
+            max-height: 100vh !important;
+            /* Batasi tinggi maksimum agar tidak overflow */
+            object-fit: cover;
+            /* Menjaga proporsi gambar */
+            width: 100% !important;
+            /* Pastikan gambar melebar */
+        }
+
+        /* Tombol tanpa padding atau margin */
+        .custom-btn {
+            padding: 0 !important;
+            /* Hilangkan padding */
+            margin: 0 !important;
+            /* Hilangkan margin */
+            display: inline-block;
+            line-height: 1;
+            /* Atur ketinggian tombol */
+        }
+        .img-same-size {
+    width: 100%; /* Menyesuaikan lebar dengan elemen parent */
+    height: 200px; /* Tetapkan tinggi yang sama */
+    object-fit: cover; /* Agar gambar tetap proporsional */
+}
+    </style>
+
     <!-- =======================================================
   * Template Name: BizLand
   * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
@@ -74,16 +104,16 @@
                         <li><a href="#services">Testimoni</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         {{-- <li><a href="#team">Team</a></li> --}}
-                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        <li><a href="{{ url('/artikel') }}">Artikel</a></li>
                         <li class="dropdown"><a href="#"><span>Jasa Layanan</span> <i
                                     class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>
-                                <li><a href="#">Bangunan Gedung</a></li>
-                                <li><a href="#">Rumah Tinggal/Ruko</a></li>
-                                <li><a href="#">Bangunan Gudang</a></li>
-                                <li><a href="#">Assesment</a></li>
-                                <li><a href="#">BIM, Tekla, RAB</a></li>
-                                <li><a href="#">DED Arsitek, MEP</a></li>
+                                <li><a href="{{ url('/layanan-detail') }}">Bangunan Gedung</a></li>
+                                <li><a href="/layanan-detail">Rumah Tinggal/Ruko</a></li>
+                                <li><a href="/layanan-detail">Bangunan Gudang</a></li>
+                                <li><a href="/layanan-detail">Assesment</a></li>
+                                <li><a href="/layanan-detail">BIM, Tekla, RAB</a></li>
+                                <li><a href="/layanan-detail">DED Arsitek, MEP</a></li>
                             </ul>
                         </li>
                         <li><a href="#contact">Pricing</a></li>
@@ -117,7 +147,7 @@
       </div>
 
     </section><!-- /Hero Section --> --}}
-        <section id="hero" class="hero section light-background">
+        {{-- <section id="hero" class="hero section light-background">
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Left Content -->
@@ -134,7 +164,26 @@
                     </div>
                 </div>
             </div>
+        </section> --}}
+        <section id="hero" class="hero section light-background">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Left Content -->
+                    <div class="col-lg-6 d-flex flex-column justify-content-center">
+                        <span class="text-white">Solusi Terpercaya</span>
+                        <h2 class="text-white fw-bold">Analisa dan Perencanaan Struktur Bangunan</h2>
+                        <a href="#profil" class="btn btn-primary" style="width: 120px">Selengkapnya</a>
+                    </div>
+
+                    <!-- Right Image -->
+                    <div class="col-lg-6">
+                        <img src="assets_2/img/macrohitungstruktur-banner3.png" alt="Blueprints"
+                            class="img-fluid rounded full-height-img">
+                    </div>
+                </div>
+            </div>
         </section>
+
 
 
 
@@ -273,17 +322,17 @@
                         <div class="row gy-3">
 
                             <!-- Image 1 -->
-                            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="100">
                                 <img src="assets_2/img/2_logo.png" alt="SAP2000 Logo" class="img-fluid">
                             </div>
 
                             <!-- Image 2 -->
-                            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-sm-4" data-aos="fade-up" data-aos-delay="200">
                                 <img src="assets_2/img/ETABS-CSI.png" alt="ETABS Logo" class="img-fluid">
                             </div>
 
                             <!-- Image 3 -->
-                            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                            <div class="col-sm-2" data-aos="fade-up" data-aos-delay="300">
                                 <img src="assets_2/img/sni-logo-6BC4A3F52A-seeklogo.com.png" alt="SNI Logo"
                                     class="img-fluid">
                             </div>
@@ -468,7 +517,7 @@
               }
             }
           </script>
-                    <div class="swiper-wrapper align-items-center">
+                    {{-- <div class="swiper-wrapper align-items-center">
                         <div class="swiper-slide"><img src="assets_2/img/unair-ewm.png" class="img-fluid"
                                 alt=""></div>
                         <div class="swiper-slide"><img src="assets_2/img/RS-Umum-Aminah.png" class="img-fluid"
@@ -477,15 +526,50 @@
                                 alt=""></div>
                         <div class="swiper-slide"><img src="assets_2/img/logoppns-1-768x403.png" class="img-fluid"
                                 alt=""></div>
-                        <div class="swiper-slide"><img src="assets_2/img/272965842_110381708222020_1530594946246873803_n 1.png" class="img-fluid"
-                                alt=""></div>
-                        {{-- <div class="swiper-slide"><img src="assets_2/assets/img/clients/client-6.png" class="img-fluid"
+                        <div class="swiper-slide"><img
+                                src="assets_2/img/272965842_110381708222020_1530594946246873803_n 1.png"
+                                class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets_2/assets/img/clients/client-6.png" class="img-fluid"
                                 alt=""></div>
                         <div class="swiper-slide"><img src="assets_2/assets/img/clients/client-7.png" class="img-fluid"
                                 alt=""></div>
                         <div class="swiper-slide"><img src="assets_2/assets/img/clients/client-8.png" class="img-fluid"
-                                alt=""></div> --}}
+                                alt=""></div>
+                    </div> --}}
+                    <div class="container my-4">
+                        <div class="row g-3">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <img src="assets_2/img/unair-ewm.png" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <img src="assets_2/img/RS-Umum-Aminah.png" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <img src="assets_2/img/LOGO-WEB4.png" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <img src="assets_2/img/logoppns-1-768x403.png" class="img-fluid rounded"
+                                    alt="">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <img src="assets_2/img/272965842_110381708222020_1530594946246873803_n 1.png"
+                                    class="img-fluid rounded" alt="">
+                            </div>
+                            <!-- Uncomment the following for additional images -->
+                            <!--
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <img src="assets_2/assets/img/clients/client-6.png" class="img-fluid rounded" alt="" style="height: 150px; object-fit: cover;">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <img src="assets_2/assets/img/clients/client-7.png" class="img-fluid rounded" alt="" style="height: 150px; object-fit: cover;">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <img src="assets_2/assets/img/clients/client-8.png" class="img-fluid rounded" alt="" style="height: 150px; object-fit: cover;">
+                            </div>
+                            -->
+                        </div>
                     </div>
+
                 </div>
 
             </div>
@@ -509,53 +593,51 @@
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-item position-relative bg-primary">
                             <div class="img-fluid">
-                                {{-- <i class="bi bi-activity"></i> --}}
+
                                 <img src="assets_2/img/45.svg" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3 class="text-white">Bangunan Gedung</h3>
+                                <h3 class="text-white">Jasa Hitung Struktur Gedung</h3>
                             </a>
-                            <p class="text-white">PAnalisa struktur bangunan Gedung yang mengacu pada SNI pembebanan, SNI gempa, dan SNI beton terbaru</p>
+                            <p class="text-white">Analisa struktur bangunan Gedung yang mengacu pada SNI pembebanan, SNI gempa, dan SNI beton terbaru</p>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="service-item position-relative">
                             <div class="img-fluid">
-                                {{-- <i class="bi bi-broadcast"></i> --}}
-                                <img src="assets_2/img/45.svg" alt="" class="img-fluid">
+
+                                <img src="assets_2/img/jasa-hitung-struktur-rumah-tinggal-ruko (1).png" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3>Eosle Commodi</h3>
+                                <h3> Jasa Hitung Struktur Rumah & Ruko</h3>
                             </a>
-                            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum
-                                hic non ut nesciunt dolorem.</p>
+                            <p>  Analisa struktur rumah tinggal yang mengutamakan keamanan saat ditinggali dan tetap efisien</p>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="service-item position-relative bg-primary">
                             <div class="img-fluid">
-                                {{-- <i class="bi bi-easel"></i> --}}
-                                <img src="assets_2/img/45.svg" alt="" class="img-fluid">
+                                <img src="assets_2/img/jasa-hitung-struktur-gudang (1).png" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3>Rumah Tinggal/ Ruko</h3>
+                                <h3 class="text-white">Jasa Hitung Struktur Gudang/Warehouse</h3>
                             </a>
-                            <p>Analisa struktur bangunan Gedung yang mengacu pada SNI pembebanan, SNI gempa, dan SNI beton terbaru</p>
+                            <p class="text-white"> Analisa struktur Gudang dan Pabrik dengan struktur baja berat</p>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="service-item position-relative">
                             <div class="img-fluid">
-                                {{-- <i class="bi bi-bounding-box-circles"></i> --}}
-                                <img src="assets_2/img/45.svg" alt="" class="img-fluid">
+
+                                <img src="assets_2/img/46.png" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3>A Jasa hitung struktur gedung</h3>
+                                <h3>Jasa hitung struktur Non Gedung</h3>
                             </a>
-                            <p>Analisa struktur bangunan Gedung yang mengacu pada SNI pembebanan, SNI gempa, dan SNI beton terbaru</p>
+                            <p> Analisa struktur non Gedung, atap kanopi, rangka atap cremona, Bangunan IPAL, dan lain-lain</p>
                             <a href="#" class="stretched-link"></a>
                         </div>
                     </div><!-- End Service Item -->
@@ -563,13 +645,12 @@
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
                         <div class="service-item position-relative bg-primary">
                             <div class="img-fluid">
-                                {{-- <i class="bi bi-calendar4-week"></i> --}}
-                                <img src="assets_2/img/45.svg" alt="" class="img-fluid">
+                                <img src="assets_2/img/44.png" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3> Jasa hitung struktur gedung</h3>
+                                <h3 class="text-white">  Assesment Struktur</h3>
                             </a>
-                            <p>Analisa struktur bangunan Gedung yang mengacu pada SNI pembebanan, SNI gempa, dan SNI beton terbaru</p>
+                            <p class="text-white"> Assesment dan SLF Struktur dipergunakan untuk Gedung atau  Gudang atau pabrik yang membutuhkan studi kelayakan struktur</p>
                             <a href="#" class="stretched-link"></a>
                         </div>
                     </div><!-- End Service Item -->
@@ -577,56 +658,51 @@
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
                         <div class="service-item position-relative">
                             <div class="img-fluid">
-                                {{-- <i class="bi bi-chat-square-text"></i> --}}
-                                <img src="assets_2/img/45.svg" alt="" class="img-fluid">
+                                <img src="assets_2/img/48.png" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3> Jasa hitung struktur gedung</h3>
+                                <h3>  Modeling Bim & Tekla Structures</h3>
                             </a>
-                            <p>Analisa struktur bangunan Gedung yang mengacu pada SNI pembebanan, SNI gempa, dan SNI beton terbaru</p>
+                            <p> Modeling struktur baja dengan tekla, membantu proses gambar kerja agar hasil lebih detail dan akurat.</p>
                             <a href="#" class="stretched-link"></a>
                         </div>
                     </div><!-- End Service Item -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
                         <div class="service-item position-relative bg-primary">
                             <div class="img-fluid">
-                                {{-- <i class="bi bi-chat-square-text"></i> --}}
-                                <img src="assets_2/img/45.svg" alt="" class="img-fluid">
+                                <img src="assets_2/img/rab.png" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3>  Jasa hitung struktur gedung</h3>
+                                <h3 class="text-white">  jasa hitung RAB</h3>
                             </a>
-                            <p>Analisa struktur bangunan Gedung yang mengacu pada SNI pembebanan, SNI gempa, dan SNI beton terbaru</p>
+                            <p class="text-white">Layanan spesial order dari MacroStruktur.id</p>
                             <a href="#" class="stretched-link"></a>
                         </div>
                     </div><!-- End Service Item -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
                         <div class="service-item position-relative">
                             <div class="img-fluid">
-                                {{-- <i class="bi bi-chat-square-text"></i> --}}
-                                <img src="assets_2/img/45.svg" alt="" class="img-fluid">
+                                <img src="assets_2/img/49.png" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3>  Jasa hitung struktur gedung</h3>
+                                <h3>  jasa DED Arsitek</h3>
                             </a>
-                            <p>Analisa struktur bangunan Gedung yang mengacu pada SNI pembebanan, SNI gempa, dan SNI beton terbaru</p>
+                            <p>Layanan spesial order dari MacroStruktur.id</p>
                             <a href="#" class="stretched-link"></a>
                         </div>
                     </div><!-- End Service Item -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
                         <div class="service-item position-relative bg-primary">
                             <div class="img-fluid">
-                                {{-- <i class="bi bi-chat-square-text"></i> --}}
-                                <img src="assets_2/img/45.svg" alt="" class="img-fluid">
+                                <img src="assets_2/img/50.png" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3>  Jasa hitung struktur gedung</h3>
+                                <h3 class="text-white">  Jasa DED Mechanical, Electrical, and Plumbing</h3>
                             </a>
-                            <p>Analisa struktur bangunan Gedung yang mengacu pada SNI pembebanan, SNI gempa, dan SNI beton terbaru</p>
+                            <p class="text-white">Layanan spesial order dari MacroStruktur.id</p>
                             <a href="#" class="stretched-link"></a>
                         </div>
                     </div><!-- End Service Item -->
-
                 </div>
 
             </div>
@@ -777,7 +853,7 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Portfolio</h2>
-                <p><span>Check Our&nbsp;</span> <span class="description-title">Portfolio</span></p>
+                <p><span>MacroStruktur.id&nbsp;</span> <span class="description-title">Portfolio</span></p>
             </div><!-- End Section Title -->
 
             <div class="container">
@@ -796,8 +872,7 @@
                     <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                            <img src="assets_2/img/Mask group.png" class="img-fluid"
-                                alt="">
+                            <img src="assets_2/img/Mask group.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 1</h4>
                                 <p>Lorem ipsum, dolor sit</p>
@@ -810,36 +885,33 @@
                         </div><!-- End Portfolio Item -->
 
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                          <img src="assets_2/img/Mask group.png" class="img-fluid"
-                          alt="">
+                            <img src="assets_2/img/Mask group.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>Product 1</h4>
                                 <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1"
-                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
+                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
+                                    title="Product 1" data-gallery="portfolio-gallery-product"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                                         class="bi bi-link-45deg"></i></a>
                             </div>
                         </div><!-- End Portfolio Item -->
 
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                          <img src="assets_2/img/Mask group.png" class="img-fluid"
-                          alt="">
+                            <img src="assets_2/img/Mask group.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>Branding 1</h4>
                                 <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1"
-                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
+                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-3.jpg"
+                                    title="Branding 1" data-gallery="portfolio-gallery-branding"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                                         class="bi bi-link-45deg"></i></a>
                             </div>
                         </div><!-- End Portfolio Item -->
 
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                          <img src="assets_2/img/Mask group.png" class="img-fluid"
-                          alt="">
+                            <img src="assets_2/img/Mask group.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 2</h4>
                                 <p>Lorem ipsum, dolor sit</p>
@@ -852,36 +924,33 @@
                         </div><!-- End Portfolio Item -->
 
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                          <img src="assets_2/img/Mask group.png" class="img-fluid"
-                          alt="">
+                            <img src="assets_2/img/Mask group.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>Product 2</h4>
                                 <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2"
-                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
+                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-5.jpg"
+                                    title="Product 2" data-gallery="portfolio-gallery-product"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                                         class="bi bi-link-45deg"></i></a>
                             </div>
                         </div><!-- End Portfolio Item -->
 
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                          <img src="assets_2/img/Mask group.png" class="img-fluid"
-                          alt="">
+                            <img src="assets_2/img/Mask group.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>Branding 2</h4>
                                 <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2"
-                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
+                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-6.jpg"
+                                    title="Branding 2" data-gallery="portfolio-gallery-branding"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                                         class="bi bi-link-45deg"></i></a>
                             </div>
                         </div><!-- End Portfolio Item -->
 
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                          <img src="assets_2/img/Mask group.png" class="img-fluid"
-                          alt="">
+                            <img src="assets_2/img/Mask group.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 3</h4>
                                 <p>Lorem ipsum, dolor sit</p>
@@ -894,34 +963,35 @@
                         </div><!-- End Portfolio Item -->
 
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                          <img src="assets_2/img/Mask group.png" class="img-fluid"
-                          alt="">
+                            <img src="assets_2/img/Mask group.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>Product 3</h4>
                                 <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3"
-                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
+                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-8.jpg"
+                                    title="Product 3" data-gallery="portfolio-gallery-product"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                                         class="bi bi-link-45deg"></i></a>
                             </div>
                         </div><!-- End Portfolio Item -->
 
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                          <img src="assets_2/img/Mask group.png" class="img-fluid"
-                          alt="">
+                            <img src="assets_2/img/Mask group.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>Branding 3</h4>
                                 <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2"
-                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
+                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-9.jpg"
+                                    title="Branding 2" data-gallery="portfolio-gallery-branding"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                                         class="bi bi-link-45deg"></i></a>
                             </div>
                         </div><!-- End Portfolio Item -->
 
                     </div><!-- End Portfolio Container -->
+                    <div class="text-center mt-4">
+                        <a href="{{ url('/portfolio') }}" class="btn btn-primary">Selengkapnya</a>
+                    </div>
 
                 </div>
 
@@ -934,19 +1004,19 @@
 
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2>Team</h2>
-                <p><span>Our Hardworking</span> <span class="description-title">Team</span></p>
+                <h2>SERTIFIKASI</h2>
+                <p><span>Keahlian MacroStruktur.id </span> <span class="description-title">Terjamin!</span></p>
             </div><!-- End Section Title -->
 
             <div class="container">
 
                 <div class="row gy-4">
 
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                    <div class="col-6 col-md-4 col-lg-2 d-flex align-items-stretch" data-aos="fade-up"
                         data-aos-delay="100">
-                        <div class="team-member">
+                        {{-- <div class="team-member">
                             <div class="member-img">
-                                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                                <img src="assets_2/img/ssk-1.png" class="img-fluid" alt="">
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter-x"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -958,12 +1028,13 @@
                                 <h4>Walter White</h4>
                                 <span>Chief Executive Officer</span>
                             </div>
-                        </div>
+                        </div> --}}
+                        <img src="assets_2/img/ssk-1.png" class="img-fluid" alt="">
                     </div><!-- End Team Member -->
 
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                    <div class="col-6 col-md-4 col-lg-2 d-flex align-items-stretch" data-aos="fade-up"
                         data-aos-delay="200">
-                        <div class="team-member">
+                        {{-- <div class="team-member">
                             <div class="member-img">
                                 <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
                                 <div class="social">
@@ -977,12 +1048,13 @@
                                 <h4>Sarah Jhonson</h4>
                                 <span>Product Manager</span>
                             </div>
-                        </div>
+                        </div> --}}
+                        <img src="assets_2/img/ssk-2.png" class="img-fluid" alt="">
                     </div><!-- End Team Member -->
 
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                    <div class="col-6 col-md-4 col-lg-2 d-flex align-items-stretch" data-aos="fade-up"
                         data-aos-delay="300">
-                        <div class="team-member">
+                        {{-- <div class="team-member">
                             <div class="member-img">
                                 <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
                                 <div class="social">
@@ -996,12 +1068,13 @@
                                 <h4>William Anderson</h4>
                                 <span>CTO</span>
                             </div>
-                        </div>
+                        </div> --}}
+                        <img src="assets_2/img/ssk-3.png" class="img-fluid" alt="">
                     </div><!-- End Team Member -->
 
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                    <div class="col-6 col-md-4 col-lg-2 d-flex align-items-stretch" data-aos="fade-up"
                         data-aos-delay="400">
-                        <div class="team-member">
+                        {{-- <div class="team-member">
                             <div class="member-img">
                                 <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
                                 <div class="social">
@@ -1015,7 +1088,28 @@
                                 <h4>Amanda Jepson</h4>
                                 <span>Accountant</span>
                             </div>
+                        </div> --}}
+                        <img src="assets_2/img/ssk-4.png" class="img-fluid" alt="">
+                    </div><!-- End Team Member -->
+                    <div class="col-6 col-md-4 col-lg-4 d-flex align-items-stretch" data-aos="fade-up"
+                        data-aos-delay="400">
+                        {{-- <div class="team-member">
+                        <div class="member-img">
+                            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href=""><i class="bi bi-twitter-x"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                                <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
                         </div>
+                        <div class="member-info">
+                            <h4>Amanda Jepson</h4>
+                            <span>Accountant</span>
+                        </div>
+                    </div> --}}
+                        <img src="assets_2/img/43d34971-7ea7-48d1-bba2-2d8c2f8000e8.png" class="img-fluid"
+                            alt="">
                     </div><!-- End Team Member -->
 
                 </div>
@@ -1030,7 +1124,9 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Pricing</h2>
-                <p><span>Check our</span> <span class="description-title">Pricing</span></p>
+                <p><span>Cek Harga dan Kunsultasi Gratis </span></p>
+                <p><span>Bersama</span><span
+                    class="description-title"> MacroStruktur.id</span></p>
             </div><!-- End Section Title -->
 
             <div class="container">
@@ -1039,38 +1135,79 @@
 
                     <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="pricing-item">
-                            <h3>Free</h3>
-                            <h4><sup>$</sup>0<span> / month</span></h4>
-                            <ul>
+                            <h3 class="bg-primary text-white">Bangunan Gedung</h3>
+                            <h4><sup>Rp</sup>4.500<span> /m²</span></h4>
+                            <img src="assets_2/img/jasa-hitung-struktur-gedung.png" class="img-fluid img-same-size" alt="">
+                            {{-- <ul>
                                 <li>Aida dere</li>
                                 <li>Nec feugiat nisl</li>
                                 <li>Nulla at volutpat dola</li>
                                 <li class="na">Pharetra massa</li>
                                 <li class="na">Massa ultricies mi</li>
-                            </ul>
+                            </ul> --}}
                             <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
+                                <a href="#" class="btn-buy">Order Sekarang!</a>
                             </div>
                         </div>
                     </div><!-- End Pricing Item -->
 
-                    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="pricing-item featured">
-                            <h3>Business</h3>
-                            <h4><sup>$</sup>19<span> / month</span></h4>
-                            <ul>
+                    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="pricing-item">
+                            <h3 class="bg-primary text-white">Rumah Tinggal/ ruko</h3>
+                            <h4><sup>Rp</sup>8.000<span> /m²</span></h4>
+                            <img src="assets_2/img/jasa-hitung-struktur-rumah-tinggal-ruko.png" class="img-fluid img-same-size"
+                            alt="">
+                            {{-- <ul>
+                                <li>Aida dere</li>
+                                <li>Nec feugiat nisl</li>
+                                <li>Nulla at volutpat dola</li>
+                                <li class="na">Pharetra massa</li>
+                                <li class="na">Massa ultricies mi</li>
+                            </ul> --}}
+                            <div class="btn-wrap">
+                                <a href="#" class="btn-buy">Order Sekarang!</a>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+
+                    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="pricing-item">
+                            <span class="advanced bg-danger">Best</span>
+                            <h3 class="bg-primary text-white">Gudang Baja</h3>
+                            <h4><sup>Rp</sup>4.500<span>/m²</span></h4>
+                            <img src="assets_2/img/jasa-hitung-struktur-gudang.png" class="img-fluid img-same-size"
+                            alt="">
+                            {{-- <ul>
                                 <li>Aida dere</li>
                                 <li>Nec feugiat nisl</li>
                                 <li>Nulla at volutpat dola</li>
                                 <li>Pharetra massa</li>
-                                <li class="na">Massa ultricies mi</li>
-                            </ul>
+                                <li>Massa ultricies mi</li>
+                            </ul> --}}
+                            <div class="btn-wrap">
+                                <a href="#" class="btn-buy">Order Sekarang!</a>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+                    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="pricing-item">
+                            <h3>Non Gedung</h3>
+                            {{-- <h4><sup>$</sup>29<span> / month</span></h4> --}}
+                            <img src="assets_2/img/jasa-hitung-struktur-non-gedung.png" class="img-fluid img-same-size"
+                            alt="">
+                            <span>Analisa struktur</span>
+                            <span>Bangunan IPAL</span>
+                            <span>dan lain-lain</span>
+                            {{-- <ul>
+                                <li>Analisa struktur</li>
+                                <li>Bangunan IPAL</li>
+                                <li>dan lain-lain</li>
+                            </ul> --}}
                             <div class="btn-wrap">
                                 <a href="#" class="btn-buy">Buy Now</a>
                             </div>
                         </div>
                     </div><!-- End Pricing Item -->
-
                     <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="pricing-item">
                             <h3>Developer</h3>
@@ -1087,12 +1224,90 @@
                             </div>
                         </div>
                     </div><!-- End Pricing Item -->
-
                     <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="pricing-item">
-                            <span class="advanced">Advanced</span>
-                            <h3>Ultimate</h3>
-                            <h4><sup>$</sup>49<span> / month</span></h4>
+                            <h3>Developer</h3>
+                            <h4><sup>$</sup>29<span> / month</span></h4>
+                            <ul>
+                                <li>Aida dere</li>
+                                <li>Nec feugiat nisl</li>
+                                <li>Nulla at volutpat dola</li>
+                                <li>Pharetra massa</li>
+                                <li>Massa ultricies mi</li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn-buy">Buy Now</a>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+                    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="pricing-item">
+                            <h3>Developer</h3>
+                            <h4><sup>$</sup>29<span> / month</span></h4>
+                            <ul>
+                                <li>Aida dere</li>
+                                <li>Nec feugiat nisl</li>
+                                <li>Nulla at volutpat dola</li>
+                                <li>Pharetra massa</li>
+                                <li>Massa ultricies mi</li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn-buy">Buy Now</a>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+                    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="pricing-item">
+                            <h3>Developer</h3>
+                            <h4><sup>$</sup>29<span> / month</span></h4>
+                            <ul>
+                                <li>Aida dere</li>
+                                <li>Nec feugiat nisl</li>
+                                <li>Nulla at volutpat dola</li>
+                                <li>Pharetra massa</li>
+                                <li>Massa ultricies mi</li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn-buy">Buy Now</a>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+                    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="pricing-item">
+                            <h3>Developer</h3>
+                            <h4><sup>$</sup>29<span> / month</span></h4>
+                            <ul>
+                                <li>Aida dere</li>
+                                <li>Nec feugiat nisl</li>
+                                <li>Nulla at volutpat dola</li>
+                                <li>Pharetra massa</li>
+                                <li>Massa ultricies mi</li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn-buy">Buy Now</a>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+                    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="pricing-item">
+                            <h3>Developer</h3>
+                            <h4><sup>$</sup>29<span> / month</span></h4>
+                            <ul>
+                                <li>Aida dere</li>
+                                <li>Nec feugiat nisl</li>
+                                <li>Nulla at volutpat dola</li>
+                                <li>Pharetra massa</li>
+                                <li>Massa ultricies mi</li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn-buy">Buy Now</a>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+                    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="pricing-item">
+                            <h3>Developer</h3>
+                            <h4><sup>$</sup>29<span> / month</span></h4>
                             <ul>
                                 <li>Aida dere</li>
                                 <li>Nec feugiat nisl</li>

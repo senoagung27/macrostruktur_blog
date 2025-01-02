@@ -17,7 +17,14 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 
 Route::get('/', 'LandingpageController@index');
-Route::get('/blog', 'BlogController@index');
+// Route::get('/blog', 'BlogController@index');
+Route::get('/artikel', 'ArtikelController@index');
+Route::get('/artikel-details', 'ArtikelController@detail');
+
+Route::get('/layanan', 'LayananController@index');
+Route::get('/layanan-detail', 'LayananController@detail');
+
+Route::get('/portfolio', 'PortfolioController@index');
 /*Route::get('/isi_post', function(){
 	return view('blog.isi_post');
 });*/
