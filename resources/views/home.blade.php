@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Index - BizLand Bootstrap Template</title>
+    <title>Home - MacroStruktur</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
     <!-- Favicons -->
-    <link href="assets_2/assets/img/favicon.png" rel="icon">
-    <link href="assets_2/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets_2/img/LOGO MACROSTRUKTUR 4.png" rel="icon">
+    <link href="assets_2/img/LOGO MACROSTRUKTUR 4.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -52,11 +52,15 @@
             line-height: 1;
             /* Atur ketinggian tombol */
         }
+
         .img-same-size {
-    width: 100%; /* Menyesuaikan lebar dengan elemen parent */
-    height: 200px; /* Tetapkan tinggi yang sama */
-    object-fit: cover; /* Agar gambar tetap proporsional */
-}
+            width: 100%;
+            /* Menyesuaikan lebar dengan elemen parent */
+            height: 200px;
+            /* Tetapkan tinggi yang sama */
+            object-fit: cover;
+            /* Agar gambar tetap proporsional */
+        }
     </style>
 
     <!-- =======================================================
@@ -107,14 +111,15 @@
                         <li><a href="{{ url('/artikel') }}">Artikel</a></li>
                         <li class="dropdown"><a href="#"><span>Jasa Layanan</span> <i
                                     class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                    <ul>
-                                        <li><a href="{{ url('/layanan-detail/bangunan-gedung') }}">Bangunan Gedung</a></li>
-                                        <li><a href="{{ url('/layanan-detail/rumah-tinggal-ruko') }}">Rumah Tinggal/Ruko</a></li>
-                                        <li><a href="{{ url('/layanan-detail/bangunan-gudang') }}">Bangunan Gudang</a></li>
-                                        <li><a href="{{ url('/layanan-detail/assesment') }}">Assesment</a></li>
-                                        <li><a href="{{ url('/layanan-detail/bim-tekla-rab') }}">BIM, Tekla, RAB</a></li>
-                                        <li><a href="{{ url('/layanan-detail/ded-arsitek-mep') }}">DED Arsitek, MEP</a></li>
-                                    </ul>
+                            <ul>
+                                <li><a href="{{ url('/layanan-detail/bangunan-gedung') }}">Bangunan Gedung</a></li>
+                                <li><a href="{{ url('/layanan-detail/rumah-tinggal-ruko') }}">Rumah Tinggal/Ruko</a>
+                                </li>
+                                <li><a href="{{ url('/layanan-detail/bangunan-gudang') }}">Bangunan Gudang</a></li>
+                                <li><a href="{{ url('/layanan-detail/assesment') }}">Assesment</a></li>
+                                <li><a href="{{ url('/layanan-detail/bim-tekla-rab') }}">BIM, Tekla, RAB</a></li>
+                                <li><a href="{{ url('/layanan-detail/ded-arsitek-mep') }}">DED Arsitek, MEP</a></li>
+                            </ul>
                         </li>
                         <li><a href="#contact">Pricing</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -231,9 +236,9 @@
 
                     <div class="col-6 col-md-6 col-xl-3 d-flex" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-item position-relative">
-                            <div class="icon"><i class="bi bi-activity icon"></i></div>
+                            <div class="icon"><i class="bi bi-person-check icon"></i></div>
                             <h4><a href="" class="stretched-link">Berpengalaman</a></h4>
-                            <p>Sejak tahun 2020, kami telah membangun reputasi sebagai perencana struktur ahli.</p>
+                            <p>Sejak tahun 2019, kami telah membangun reputasi sebagai perencana struktur ahli.</p>
                         </div>
                     </div><!-- End Service Item -->
 
@@ -255,7 +260,7 @@
 
                     <div class="col-6 col-md-6 col-xl-3 d-flex" data-aos="fade-up" data-aos-delay="400">
                         <div class="service-item position-relative">
-                            <div class="icon"><i class="bi bi-broadcast icon"></i></div>
+                            <div class="icon"><i class="bi bi-calendar-week icon"></i></div>
                             <h4><a href="" class="stretched-link">Berkualitas</a></h4>
                             <p>Kualitas perencanaan struktur terbaik, terjangkau mulai dari Rp 4.500/m² saja!*</p>
                         </div>
@@ -289,11 +294,11 @@
                         data-aos-delay="200">
                         <div class="about-content ps-0 ps-lg-3">
                             <h3>Solusi Struktur Cerdas untuk Bangunan</h3>
-                            <h6><b>Macro Engineering Studio</b></h6>
+                            <h6><b>macrostruktur.id</b></h6>
                             <p class="fst-italic">
-                                Ahli Perencanaan Struktur Bersertifikat.
-                                Menguasai ETABS & SAP2000, berpedoman pada SNI terkini untuk perhitungan struktur yang
-                                presisi.
+                                Tim Ahli Perencanaan Struktur yang Bersertifikat, 
+                                menguasai software ETABS, SAP2000, Revit, dan Autocad, 
+                                berpedoman pada SNI untuk perhitungan yang tepat dan akurat
                             </p>
                             {{-- <ul>
                 <li>
@@ -311,13 +316,6 @@
                   </div>
                 </li>
               </ul> --}}
-                            <p>
-                                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in
-                                culpa qui officia deserunt mollit anim id est laborum
-                            </p>
                         </div>
                         <div class="row gy-3">
 
@@ -360,222 +358,6 @@
 
         </section><!-- /About Section -->
 
-        <!-- Skills Section -->
-        {{-- <section id="skills" class="skills section">
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row skills-content skills-animation">
-
-                    <div class="col-lg-6">
-
-                        <div class="progress">
-                            <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div><!-- End Skills Item -->
-
-                        <div class="progress">
-                            <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div><!-- End Skills Item -->
-
-                        <div class="progress">
-                            <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div><!-- End Skills Item -->
-
-                    </div>
-
-                    <div class="col-lg-6">
-
-                        <div class="progress">
-                            <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div><!-- End Skills Item -->
-
-                        <div class="progress">
-                            <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div><!-- End Skills Item -->
-
-                        <div class="progress">
-                            <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div><!-- End Skills Item -->
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- /Skills Section --> --}}
-
-        <!-- Stats Section -->
-        <section id="stats" class="stats section">
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-                        <i class="bi bi-emoji-smile"></i>
-                        <div class="stats-item">
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Happy Clients</p>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-                        <i class="bi bi-journal-richtext"></i>
-                        <div class="stats-item">
-                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Projects</p>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-                        <i class="bi bi-headset"></i>
-                        <div class="stats-item">
-                            <span data-purecounter-start="0" data-purecounter-end="1463"
-                                data-purecounter-duration="1" class="purecounter"></span>
-                            <p>Hours Of Support</p>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-                        <i class="bi bi-people"></i>
-                        <div class="stats-item">
-                            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Hard Workers</p>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                </div>
-
-            </div>
-
-        </section><!-- /Stats Section -->
-
-        <!-- Clients Section -->
-        <section id="clients" class="clients section light-background">
-
-            <div class="container">
-
-                <div class="swiper init-swiper">
-                    <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-                    {{-- <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide"><img src="assets_2/img/unair-ewm.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets_2/img/RS-Umum-Aminah.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets_2/img/LOGO-WEB4.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets_2/img/logoppns-1-768x403.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img
-                                src="assets_2/img/272965842_110381708222020_1530594946246873803_n 1.png"
-                                class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="assets_2/assets/img/clients/client-6.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets_2/assets/img/clients/client-7.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets_2/assets/img/clients/client-8.png" class="img-fluid"
-                                alt=""></div>
-                    </div> --}}
-                    <div class="container my-4">
-                        <div class="row g-3">
-                            <div class="col-6 col-md-4 col-lg-3">
-                                <img src="assets_2/img/unair-ewm.png" class="img-fluid rounded" alt="">
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <img src="assets_2/img/RS-Umum-Aminah.png" class="img-fluid rounded" alt="">
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-3">
-                                <img src="assets_2/img/LOGO-WEB4.png" class="img-fluid rounded" alt="">
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <img src="assets_2/img/logoppns-1-768x403.png" class="img-fluid rounded"
-                                    alt="">
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <img src="assets_2/img/272965842_110381708222020_1530594946246873803_n 1.png"
-                                    class="img-fluid rounded" alt="">
-                            </div>
-                            <!-- Uncomment the following for additional images -->
-                            <!--
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <img src="assets_2/assets/img/clients/client-6.png" class="img-fluid rounded" alt="" style="height: 150px; object-fit: cover;">
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <img src="assets_2/assets/img/clients/client-7.png" class="img-fluid rounded" alt="" style="height: 150px; object-fit: cover;">
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <img src="assets_2/assets/img/clients/client-8.png" class="img-fluid rounded" alt="" style="height: 150px; object-fit: cover;">
-                            </div>
-                            -->
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- /Clients Section -->
-
         <!-- Services Section -->
         <section id="services" class="services section">
 
@@ -591,15 +373,16 @@
                 <div class="row gy-4">
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-item position-relative bg-primary">
+                        <div class="service-item position-relative ">
                             <div class="img-fluid">
 
-                                <img src="assets_2/img/45.svg" alt="" class="img-fluid">
+                                <img src="assets_2/img/45.png" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3 class="text-white">Jasa Hitung Struktur Gedung</h3>
+                                <h3>Jasa Hitung Struktur Gedung</h3>
                             </a>
-                            <p class="text-white">Analisa struktur bangunan Gedung yang mengacu pada SNI pembebanan, SNI gempa, dan SNI beton terbaru</p>
+                            <p>Analisa struktur bangunan Gedung yang mengacu pada SNI pembebanan,
+                                SNI gempa, dan SNI beton terbaru</p>
                         </div>
                     </div><!-- End Service Item -->
 
@@ -607,24 +390,27 @@
                         <div class="service-item position-relative">
                             <div class="img-fluid">
 
-                                <img src="assets_2/img/jasa-hitung-struktur-rumah-tinggal-ruko (1).png" alt="" class="img-fluid">
+                                <img src="assets_2/img/jasa-hitung-struktur-rumah-tinggal-ruko (1).png" alt=""
+                                    class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
                                 <h3> Jasa Hitung Struktur Rumah & Ruko</h3>
                             </a>
-                            <p>  Analisa struktur rumah tinggal yang mengutamakan keamanan saat ditinggali dan tetap efisien</p>
+                            <p> Analisa struktur rumah tinggal yang mengutamakan keamanan saat ditinggali dan tetap
+                                efisien</p>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-item position-relative bg-primary">
+                        <div class="service-item position-relative ">
                             <div class="img-fluid">
-                                <img src="assets_2/img/jasa-hitung-struktur-gudang (1).png" alt="" class="img-fluid">
+                                <img src="assets_2/img/jasa-hitung-struktur-gudang (1).png" alt=""
+                                    class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3 class="text-white">Jasa Hitung Struktur Gudang/Warehouse</h3>
+                                <h3>Jasa Hitung Struktur Gudang/Warehouse</h3>
                             </a>
-                            <p class="text-white"> Analisa struktur Gudang dan Pabrik dengan struktur baja berat</p>
+                            <p> Analisa struktur Gudang dan Pabrik dengan struktur baja berat</p>
                         </div>
                     </div><!-- End Service Item -->
 
@@ -637,20 +423,22 @@
                             <a href="#" class="stretched-link">
                                 <h3>Jasa hitung struktur Non Gedung</h3>
                             </a>
-                            <p> Analisa struktur non Gedung, atap kanopi, rangka atap cremona, Bangunan IPAL, dan lain-lain</p>
+                            <p> Analisa struktur non Gedung, atap kanopi, rangka atap cremona, Bangunan IPAL, dan
+                                lain-lain</p>
                             <a href="#" class="stretched-link"></a>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                        <div class="service-item position-relative bg-primary">
+                        <div class="service-item position-relative ">
                             <div class="img-fluid">
                                 <img src="assets_2/img/44.png" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3 class="text-white">  Assesment Struktur</h3>
+                                <h3> Assesment Struktur</h3>
                             </a>
-                            <p class="text-white"> Assesment dan SLF Struktur dipergunakan untuk Gedung atau  Gudang atau pabrik yang membutuhkan studi kelayakan struktur</p>
+                            <p> Assesment dan SLF Struktur dipergunakan untuk Gedung atau Gudang
+                                atau pabrik yang membutuhkan studi kelayakan struktur</p>
                             <a href="#" class="stretched-link"></a>
                         </div>
                     </div><!-- End Service Item -->
@@ -661,21 +449,22 @@
                                 <img src="assets_2/img/48.png" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3>  Modeling Bim & Tekla Structures</h3>
+                                <h3> Modeling Bim & Tekla Structures</h3>
                             </a>
-                            <p> Modeling struktur baja dengan tekla, membantu proses gambar kerja agar hasil lebih detail dan akurat.</p>
+                            <p> Modeling struktur baja dengan tekla, membantu proses gambar kerja agar hasil lebih
+                                detail dan akurat.</p>
                             <a href="#" class="stretched-link"></a>
                         </div>
                     </div><!-- End Service Item -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                        <div class="service-item position-relative bg-primary">
+                        <div class="service-item position-relative">
                             <div class="img-fluid">
                                 <img src="assets_2/img/rab.png" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3 class="text-white">  jasa hitung RAB</h3>
+                                <h3> jasa hitung RAB</h3>
                             </a>
-                            <p class="text-white">Layanan spesial order dari MacroStruktur.id</p>
+                            <p>Layanan spesial order</p>
                             <a href="#" class="stretched-link"></a>
                         </div>
                     </div><!-- End Service Item -->
@@ -685,21 +474,21 @@
                                 <img src="assets_2/img/49.png" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3>  jasa DED Arsitek</h3>
+                                <h3> jasa DED Arsitek</h3>
                             </a>
-                            <p>Layanan spesial order dari MacroStruktur.id</p>
+                            <p>Layanan spesial order</p>
                             <a href="#" class="stretched-link"></a>
                         </div>
                     </div><!-- End Service Item -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                        <div class="service-item position-relative bg-primary">
+                        <div class="service-item position-relative">
                             <div class="img-fluid">
                                 <img src="assets_2/img/50.png" alt="" class="img-fluid">
                             </div>
                             <a href="#" class="stretched-link">
-                                <h3 class="text-white">  Jasa DED Mechanical, Electrical, and Plumbing</h3>
+                                <h3> Jasa DED Mechanical, Electrical, and Plumbing</h3>
                             </a>
-                            <p class="text-white">Layanan spesial order dari MacroStruktur.id</p>
+                            <p>Layanan spesial order</p>
                             <a href="#" class="stretched-link"></a>
                         </div>
                     </div><!-- End Service Item -->
@@ -709,7 +498,7 @@
 
         </section><!-- /Services Section -->
 
-        <!-- Testimonials Section -->
+
         <section id="testimonials" class="testimonials section dark-background">
 
             <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
@@ -847,6 +636,231 @@
 
         </section><!-- /Testimonials Section -->
 
+        <!-- Skills Section -->
+        {{-- <section id="skills" class="skills section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row skills-content skills-animation">
+
+                    <div class="col-lg-6">
+
+                        <div class="progress">
+                            <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                        <div class="progress">
+                            <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                        <div class="progress">
+                            <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <div class="progress">
+                            <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                        <div class="progress">
+                            <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                        <div class="progress">
+                            <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /Skills Section --> --}}
+
+        <!-- Stats Section -->
+        <section id="stats" class="stats section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+                        <i class="bi bi-emoji-smile"></i>
+                        <div class="stats-item">
+                            {{-- <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1"
+                                class="purecounter"></span> --}}
+                            <span>150+</span>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+                        <i class="bi bi-journal-richtext"></i>
+                        <div class="stats-item">
+                            {{-- <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1"
+                                class="purecounter"></span> --}}
+                            <span>200+</span>
+                            <p>Projects</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+                        <i class="bi bi-clock-history"></i>
+                        <div class="stats-item">
+                            {{-- <span data-purecounter-start="0" data-purecounter-end="4"
+                                data-purecounter-duration="1" class="purecounter"></span> --}}
+                            <span>5+ Years</span>
+                            <p>Experience</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+                        <i class="bi bi-person"></i>
+                        <div class="stats-item">
+                            {{-- <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1"
+                                class="purecounter"></span> --}}
+                                <span>7</span>
+                            <p>Team</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Stats Section -->
+
+        <!-- Clients Section -->
+        <section id="clients" class="clients section light-background">
+
+            <div class="container">
+
+                <div class="swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+                    {{-- <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide"><img src="assets_2/img/unair-ewm.png" class="img-fluid"
+                                alt=""></div>
+                        <div class="swiper-slide"><img src="assets_2/img/RS-Umum-Aminah.png" class="img-fluid"
+                                alt=""></div>
+                        <div class="swiper-slide"><img src="assets_2/img/LOGO-WEB4.png" class="img-fluid"
+                                alt=""></div>
+                        <div class="swiper-slide"><img src="assets_2/img/logoppns-1-768x403.png" class="img-fluid"
+                                alt=""></div>
+                        <div class="swiper-slide"><img
+                                src="assets_2/img/272965842_110381708222020_1530594946246873803_n 1.png"
+                                class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets_2/assets/img/clients/client-6.png" class="img-fluid"
+                                alt=""></div>
+                        <div class="swiper-slide"><img src="assets_2/assets/img/clients/client-7.png" class="img-fluid"
+                                alt=""></div>
+                        <div class="swiper-slide"><img src="assets_2/assets/img/clients/client-8.png" class="img-fluid"
+                                alt=""></div>
+                    </div> --}}
+                    <div class="container my-4">
+                        <div class="row g-3">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <img src="assets_2/img/unair-ewm.png" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <img src="assets_2/img/RS-Umum-Aminah.png" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <img src="assets_2/img/LOGO-WEB4.png" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <img src="assets_2/img/logoppns-1-768x403.png" class="img-fluid rounded"
+                                    alt="">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <img src="assets_2/img/272965842_110381708222020_1530594946246873803_n 1.png"
+                                    class="img-fluid rounded" alt="">
+                            </div>
+                            <!-- Uncomment the following for additional images -->
+                            <!--
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <img src="assets_2/assets/img/clients/client-6.png" class="img-fluid rounded" alt="" style="height: 150px; object-fit: cover;">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <img src="assets_2/assets/img/clients/client-7.png" class="img-fluid rounded" alt="" style="height: 150px; object-fit: cover;">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <img src="assets_2/assets/img/clients/client-8.png" class="img-fluid rounded" alt="" style="height: 150px; object-fit: cover;">
+                            </div>
+                            -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /Clients Section -->
+
+
+
+        <!-- Testimonials Section -->
+
+
         <!-- Portfolio Section -->
         <section id="portfolio" class="portfolio section">
 
@@ -866,14 +880,14 @@
                         <li data-filter=".filter-app">Gedung</li>
                         <li data-filter=".filter-product">Rumah Tinggal</li>
                         <li data-filter=".filter-branding">Gudang</li>
-                        <li data-filter=".filter-branding">Tekla</li>
+                        <li data-filter=".filter-branding">BIM Modeling</li>
                     </ul><!-- End Portfolio Filters -->
 
                     <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
                             <img src="assets_2/img/Mask group.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
+                            {{-- <div class="portfolio-info">
                                 <h4>App 1</h4>
                                 <p>Lorem ipsum, dolor sit</p>
                                 <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1"
@@ -881,25 +895,37 @@
                                         class="bi bi-zoom-in"></i></a>
                                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                                         class="bi bi-link-45deg"></i></a>
-                            </div>
+                            </div> --}}
                         </div><!-- End Portfolio Item -->
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
                             <img src="assets_2/img/Mask group.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
-                                <h4>Product 1</h4>
+                                <h4>App 2</h4>
                                 <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
-                                    title="Product 1" data-gallery="portfolio-gallery-product"
-                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2"
+                                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
                                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                                         class="bi bi-link-45deg"></i></a>
                             </div>
                         </div><!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="assets_2/img/Group 40.png" class="img-fluid" alt="">
+                            {{-- <div class="portfolio-info">
+                                <h4>Product 1</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-1.jpg"
+                                    title="Product 1" data-gallery="portfolio-gallery-product"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div> --}}
+                        </div><!-- End Portfolio Item -->
 
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                            <img src="assets_2/img/Mask group.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
+                            <img src="assets_2/img/Group 49.png" class="img-fluid" alt="">
+                            {{-- <div class="portfolio-info">
                                 <h4>Branding 1</h4>
                                 <p>Lorem ipsum, dolor sit</p>
                                 <a href="assets_2/assets/img/masonry-portfolio/masonry-portfolio-3.jpg"
@@ -907,11 +933,11 @@
                                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                                         class="bi bi-link-45deg"></i></a>
-                            </div>
+                            </div> --}}
                         </div><!-- End Portfolio Item -->
 
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                            <img src="assets_2/img/Mask group.png" class="img-fluid" alt="">
+                            <img src="assets_2/img/Group 52.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 2</h4>
                                 <p>Lorem ipsum, dolor sit</p>
@@ -1008,110 +1034,30 @@
                 <p><span>Keahlian MacroStruktur.id </span> <span class="description-title">Terjamin!</span></p>
             </div><!-- End Section Title -->
 
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <div class="col-6 col-md-4 col-lg-2 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="100">
-                        {{-- <div class="team-member">
-                            <div class="member-img">
-                                <img src="assets_2/img/ssk-1.png" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
-                            </div>
-                        </div> --}}
-                        <img src="assets_2/img/ssk-1.png" class="img-fluid" alt="">
-                    </div><!-- End Team Member -->
-
-                    <div class="col-6 col-md-4 col-lg-2 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="200">
-                        {{-- <div class="team-member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
-                            </div>
-                        </div> --}}
-                        <img src="assets_2/img/ssk-2.png" class="img-fluid" alt="">
-                    </div><!-- End Team Member -->
-
-                    <div class="col-6 col-md-4 col-lg-2 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="300">
-                        {{-- <div class="team-member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                            </div>
-                        </div> --}}
-                        <img src="assets_2/img/ssk-3.png" class="img-fluid" alt="">
-                    </div><!-- End Team Member -->
-
-                    <div class="col-6 col-md-4 col-lg-2 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="400">
-                        {{-- <div class="team-member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                            </div>
-                        </div> --}}
-                        <img src="assets_2/img/ssk-4.png" class="img-fluid" alt="">
-                    </div><!-- End Team Member -->
-                    <div class="col-6 col-md-4 col-lg-4 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="400">
-                        {{-- <div class="team-member">
-                        <div class="member-img">
-                            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter-x"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h4>Amanda Jepson</h4>
-                            <span>Accountant</span>
-                        </div>
-                    </div> --}}
-                        <img src="assets_2/img/43d34971-7ea7-48d1-bba2-2d8c2f8000e8.png" class="img-fluid"
-                            alt="">
-                    </div><!-- End Team Member -->
-
+            <div class="container text-center">
+                <div class="row">
+                    <!-- Baris pertama (2 gambar) -->
+                    <div class="col-md-6 d-flex justify-content-center align-items-center mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <img src="assets_2/img/ssk-1.png" class="img-fluid w-75" alt="Image 1">
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center align-items-center mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <img src="assets_2/img/ssk-2.png" class="img-fluid w-75" alt="Image 2">
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Baris kedua (2 gambar) -->
+                    <div class="col-md-6 d-flex justify-content-center align-items-center mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <img src="assets_2/img/ssk-3.png" class="img-fluid w-75" alt="Image 3">
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center align-items-center mb-4" data-aos="fade-up" data-aos-delay="400">
+                        <img src="assets_2/img/ssk-4.png" class="img-fluid w-75" alt="Image 4">
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Baris terakhir (1 gambar di tengah) -->
+                    <div class="col-12 d-flex justify-content-center align-items-center mb-4" data-aos="fade-up" data-aos-delay="500">
+                        <img src="assets_2/img/43d34971-7ea7-48d1-bba2-2d8c2f8000e8.png" class="img-fluid w-50" alt="Image 5">
+                    </div>
                 </div>
 
             </div>
@@ -1125,8 +1071,7 @@
             <div class="container section-title" data-aos="fade-up">
                 <h2>Pricing</h2>
                 <p><span>Cek Harga dan Kunsultasi Gratis </span></p>
-                <p><span>Bersama</span><span
-                    class="description-title"> MacroStruktur.id</span></p>
+                <p><span>Bersama</span><span class="description-title"> MacroStruktur.id</span></p>
             </div><!-- End Section Title -->
 
             <div class="container">
@@ -1137,7 +1082,8 @@
                         <div class="pricing-item">
                             <h3 class="bg-primary text-white">Bangunan Gedung</h3>
                             <h4><sup>Rp</sup>4.500<span> /m²</span></h4>
-                            <img src="assets_2/img/jasa-hitung-struktur-gedung.png" class="img-fluid img-same-size" alt="">
+                            <img src="assets_2/img/jasa-hitung-struktur-gedung.png" class="img-fluid img-same-size"
+                                alt="">
                             {{-- <ul>
                                 <li>Aida dere</li>
                                 <li>Nec feugiat nisl</li>
@@ -1155,8 +1101,8 @@
                         <div class="pricing-item">
                             <h3 class="bg-primary text-white">Rumah Tinggal/ ruko</h3>
                             <h4><sup>Rp</sup>8.000<span> /m²</span></h4>
-                            <img src="assets_2/img/jasa-hitung-struktur-rumah-tinggal-ruko.png" class="img-fluid img-same-size"
-                            alt="">
+                            <img src="assets_2/img/jasa-hitung-struktur-rumah-tinggal-ruko.png"
+                                class="img-fluid img-same-size" alt="">
                             {{-- <ul>
                                 <li>Aida dere</li>
                                 <li>Nec feugiat nisl</li>
@@ -1172,11 +1118,11 @@
 
                     <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="pricing-item">
-                            <span class="advanced bg-danger">Best</span>
+                            {{-- <span class="advanced bg-danger">Best</span> --}}
                             <h3 class="bg-primary text-white">Gudang Baja</h3>
                             <h4><sup>Rp</sup>4.500<span>/m²</span></h4>
                             <img src="assets_2/img/jasa-hitung-struktur-gudang.png" class="img-fluid img-same-size"
-                            alt="">
+                                alt="">
                             {{-- <ul>
                                 <li>Aida dere</li>
                                 <li>Nec feugiat nisl</li>
@@ -1193,8 +1139,8 @@
                         <div class="pricing-item">
                             <h3>Non Gedung</h3>
                             {{-- <h4><sup>$</sup>29<span> / month</span></h4> --}}
-                            <img src="assets_2/img/jasa-hitung-struktur-non-gedung.png" class="img-fluid img-same-size"
-                            alt="">
+                            <img src="assets_2/img/jasa-hitung-struktur-non-gedung.png"
+                                class="img-fluid img-same-size" alt="">
                             <span>Analisa struktur</span>
                             <span>Bangunan IPAL</span>
                             <span>dan lain-lain</span>
@@ -1204,119 +1150,80 @@
                                 <li>dan lain-lain</li>
                             </ul> --}}
                             <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
+                                <a href="#" class="btn-buy">Hubungi Kami</a>
                             </div>
                         </div>
                     </div><!-- End Pricing Item -->
                     <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="pricing-item">
-                            <h3>Developer</h3>
-                            <h4><sup>$</sup>29<span> / month</span></h4>
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li>Massa ultricies mi</li>
-                            </ul>
+                            <h3>Project Lainnya</h3>
+                            {{-- <h4><sup>$</sup>29<span> / month</span></h4> --}}
+                            <img src="assets_2/img/modeling-bim-tekla-structures.png"
+                            class="img-fluid img-same-size" alt="">
+                            <p>Modeling Tekla</p>
+                            <p>BIM Structure</p>
                             <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
+                                <a href="#" class="btn-buy">Hubungi Kami</a>
                             </div>
                         </div>
                     </div><!-- End Pricing Item -->
                     <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="pricing-item">
-                            <h3>Developer</h3>
-                            <h4><sup>$</sup>29<span> / month</span></h4>
-                            <ul>
+                            <h3>RAB Struktur</h3>
+                            {{-- <h4><sup>$</sup>29<span> / month</span></h4> --}}
+                            <img src="assets_2/img/rab.png"
+                            class="img-fluid img-same-size" alt="">
+                            {{-- <ul>
                                 <li>Aida dere</li>
                                 <li>Nec feugiat nisl</li>
                                 <li>Nulla at volutpat dola</li>
                                 <li>Pharetra massa</li>
                                 <li>Massa ultricies mi</li>
-                            </ul>
+                            </ul> --}}
+                            <p>RAB Struktur</p>
+                            <p>Arsitek, dan ME</p>
                             <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
+                                <a href="#" class="btn-buy">Hubungi Kami</a>
                             </div>
                         </div>
                     </div><!-- End Pricing Item -->
                     <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="pricing-item">
-                            <h3>Developer</h3>
-                            <h4><sup>$</sup>29<span> / month</span></h4>
-                            <ul>
+                            <h3>Assesment Struktur</h3>
+                            {{-- <h4><sup>$</sup>29<span> / month</span></h4> --}}
+                            <img src="assets_2/img/272965844.png"
+                            class="img-fluid img-same-size" alt="">
+                            {{-- <ul>
                                 <li>Aida dere</li>
                                 <li>Nec feugiat nisl</li>
                                 <li>Nulla at volutpat dola</li>
                                 <li>Pharetra massa</li>
                                 <li>Massa ultricies mi</li>
-                            </ul>
+                            </ul> --}}
+                            <p>Structure Assesment </p>
+                            <p>(untuk SLF dan Perkuatan Struktur)</p>
                             <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
+                                <a href="#" class="btn-buy">Hubungi Kami</a>
                             </div>
                         </div>
                     </div><!-- End Pricing Item -->
                     <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="pricing-item">
-                            <h3>Developer</h3>
-                            <h4><sup>$</sup>29<span> / month</span></h4>
-                            <ul>
+                            <h3>Special Order</h3>
+                            {{-- <h4><sup>$</sup>29<span> / month</span></h4> --}}
+                            <img src="assets_2/img/272965843.png"
+                            class="img-fluid img-same-size" alt="">
+                            {{-- <ul>
                                 <li>Aida dere</li>
                                 <li>Nec feugiat nisl</li>
                                 <li>Nulla at volutpat dola</li>
                                 <li>Pharetra massa</li>
                                 <li>Massa ultricies mi</li>
-                            </ul>
+                            </ul> --}}
+                            <p> DED Arsitek</p>
+                            <p>DED MEP</p>
                             <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
-                            </div>
-                        </div>
-                    </div><!-- End Pricing Item -->
-                    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="pricing-item">
-                            <h3>Developer</h3>
-                            <h4><sup>$</sup>29<span> / month</span></h4>
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li>Massa ultricies mi</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
-                            </div>
-                        </div>
-                    </div><!-- End Pricing Item -->
-                    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="pricing-item">
-                            <h3>Developer</h3>
-                            <h4><sup>$</sup>29<span> / month</span></h4>
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li>Massa ultricies mi</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
-                            </div>
-                        </div>
-                    </div><!-- End Pricing Item -->
-                    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="pricing-item">
-                            <h3>Developer</h3>
-                            <h4><sup>$</sup>29<span> / month</span></h4>
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li>Massa ultricies mi</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
+                                <a href="#" class="btn-buy">Hubungi Kami</a>
                             </div>
                         </div>
                     </div><!-- End Pricing Item -->
@@ -1345,68 +1252,55 @@
                         <div class="faq-container">
 
                             <div class="faq-item faq-active">
-                                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
+                                <h3>Mengapa Struktur Bangunan Penting?</h3>
                                 <div class="faq-content">
-                                    <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus
-                                        laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor
-                                        rhoncus dolor purus non.</p>
+                                    <p>Struktur bangunan adalah tulang punggung sebuah bangunan. Tanpa perencanaan struktur yang baik, bangunan dapat runtuh, membahayakan nyawa dan harta benda.</p>
                                 </div>
                                 <i class="faq-toggle bi bi-chevron-right"></i>
                             </div><!-- End Faq item-->
 
                             <div class="faq-item">
-                                <h3>Feugiat scelerisque varius morbi enim nunc faucibus?</h3>
+                                <h3>Apa Saja Jasa yang Ditawarkan Perusahaan Struktur Bangunan?</h3>
                                 <div class="faq-content">
-                                    <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
-                                        interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
-                                        scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
-                                        Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                                    <p>Jasa yang ditawarkan perusahaan struktur bangunan sangat beragam, tergantung pada skala dan kompleksitas proyek. Beberapa jasa umum yang ditawarkan antara lain Desain struktur, Perhitungan struktur dan Konsultasi</p>
                                 </div>
                                 <i class="faq-toggle bi bi-chevron-right"></i>
                             </div><!-- End Faq item-->
 
                             <div class="faq-item">
-                                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
+                                <h3>Bagaimana Cara Memilih Perusahaan Struktur Bangunan yang Baik?</h3>
                                 <div class="faq-content">
-                                    <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
-                                        Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl
-                                        suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis
-                                        convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                                    <p>Memilih perusahaan struktur bangunan yang tepat sangat penting untuk keberhasilan proyek Anda. Beberapa hal yang perlu diperhatikan saat memilih perusahaan antara lain Pengalaman, Keahlian, Lisensi, Portofolio, Referensi dan semua ada di MacroStruktur.id
                                     </p>
                                 </div>
                                 <i class="faq-toggle bi bi-chevron-right"></i>
                             </div><!-- End Faq item-->
 
                             <div class="faq-item">
-                                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
+                                <h3>Berapa Biaya Jasa Perusahaan Struktur Bangunan?</h3>
                                 <div class="faq-content">
-                                    <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
-                                        interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
-                                        scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
-                                        Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                                    <p>Jasa perusahaan struktur bangunan sangat bervariasi tergantung pada beberapa faktor, seperti: Ukuran dan kompleksitas proyek, Lokasi proyek, Material yang digunakan, Tingkat kesulitan desain</p>
                                 </div>
                                 <i class="faq-toggle bi bi-chevron-right"></i>
                             </div><!-- End Faq item-->
 
                             <div class="faq-item">
-                                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor?</h3>
+                                <h3>Apa Perbedaan Antara Arsitek dan Insinyur Struktur?</h3>
                                 <div class="faq-content">
-                                    <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse
-                                        in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl
-                                        suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                                    <p>Arsitek dan insinyur struktur sama-sama berperan penting dalam pembangunan sebuah bangunan, namun Insinyur struktur Bertanggung jawab atas perencanaan dan analisis struktur bangunan untuk memastikan keamanan dan kekuatannya.
                                     </p>
                                 </div>
                                 <i class="faq-toggle bi bi-chevron-right"></i>
                             </div><!-- End Faq item-->
 
-                            <div class="faq-item">
+                            {{-- <div class="faq-item">
                                 <h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3>
                                 <div class="faq-content">
                                     <p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed
                                         in suscipit sequi. Distinctio ipsam dolore et.</p>
                                 </div>
                                 <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
+                            </div><!-- End Faq item--> --}}
 
                         </div>
 
@@ -1424,7 +1318,7 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Contact</h2>
-                <p><span>Need Help?</span> <span class="description-title">Contact Us</span></p>
+                <p><span>Butuh Bantuan? </span> <span class="description-title">Hubungi admin MacroStruktur.id</span></p>
             </div><!-- End Section Title -->
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -1437,8 +1331,8 @@
                             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
                                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                                 <div>
-                                    <h3>Address</h3>
-                                    <p>A108 Adam Street, New York, NY 535022</p>
+                                    <h3>Alamat</h3>
+                                    <p>Jl. Legian III Blok H6/17, Gununganyar, Surabaya, Jawa Timur</p>
                                 </div>
                             </div><!-- End Info Item -->
 
@@ -1446,7 +1340,7 @@
                                 <i class="bi bi-telephone flex-shrink-0"></i>
                                 <div>
                                     <h3>Call Us</h3>
-                                    <p>+1 5589 55488 55</p>
+                                    <p>+62 87834399815</p>
                                 </div>
                             </div><!-- End Info Item -->
 
@@ -1454,7 +1348,7 @@
                                 <i class="bi bi-envelope flex-shrink-0"></i>
                                 <div>
                                     <h3>Email Us</h3>
-                                    <p>info@example.com</p>
+                                    <p>contact@macrostruktur.id</p>
                                 </div>
                             </div><!-- End Info Item -->
 
@@ -1463,46 +1357,17 @@
                                 frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen=""
                                 loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
+                        
                     </div>
 
-                    <div class="col-lg-7">
-                        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-                            data-aos-delay="200">
-                            <div class="row gy-4">
+                    
 
-                                <div class="col-md-6">
-                                    <label for="name-field" class="pb-2">Your Name</label>
-                                    <input type="text" name="name" id="name-field" class="form-control"
-                                        required="">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="email-field" class="pb-2">Your Email</label>
-                                    <input type="email" class="form-control" name="email" id="email-field"
-                                        required="">
-                                </div>
-
-                                <div class="col-md-12">
-                                    <label for="subject-field" class="pb-2">Subject</label>
-                                    <input type="text" class="form-control" name="subject" id="subject-field"
-                                        required="">
-                                </div>
-
-                                <div class="col-md-12">
-                                    <label for="message-field" class="pb-2">Message</label>
-                                    <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                                </div>
-
-                                <div class="col-md-12 text-center">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                                    <button type="submit">Send Message</button>
-                                </div>
-
-                            </div>
-                        </form>
+                    <div class="col-lg-6">
+                        <div class="text-center mt-3">
+                            <a href="https://wa.me/6287834399815?text=Bisa%20saya%20bantu?" target="_blank" class="btn btn-success" style="display: inline-flex; align-items: center; gap: 8px;">
+                                <i class="bi bi-whatsapp" style="font-size: 1.5rem;"></i> Chat WhatsApp
+                            </a>
+                        </div>
                     </div><!-- End Contact Form -->
 
                 </div>
@@ -1515,7 +1380,7 @@
 
     <footer id="footer" class="footer">
 
-        <div class="footer-newsletter">
+        {{-- <div class="footer-newsletter">
             <div class="container">
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-6">
@@ -1531,45 +1396,51 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="d-flex align-items-center">
-                        <span class="sitename">BizLand</span>
+                        {{-- <span class="sitename">BizLand</span> --}}
+                        <div class="col-lg-6 col-md-6 footer-about">
+                            <img src="assets_2/img/Group 3.png" class="img-fluid " alt="">
+                        </div>
                     </a>
                     <div class="footer-contact pt-3">
-                        <p>A108 Adam Street</p>
-                        <p>New York, NY 535022</p>
-                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                        <p><strong>Email:</strong> <span>info@example.com</span></p>
+                        <p>Jl. Legian III Blok H6/17, Gununganyar</p>
+                        <p>Surabaya, Jawa Timur</p>
+                        <p>Senin - Jumat : 08:00 - 17:00</p>
+                        <p>Sabtu : 08:00 - 12:00</p>
+                        <p class="mt-3"><strong>Kontak: </strong> <span>0878-3439-9815/span></p>
+                        <p><strong>Email: </strong> <span>macro.struktur@gmail.com</span></p>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Useful Links</h4>
+                    <h4 class="text-white">Menu Unggulan</h4>
                     <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Artikel</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Jasa Layanan</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Bagunan Gedung</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Rumah Tinggal/Ruko</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Our Services</h4>
+                    {{-- <h4>Our Services</h4> --}}
+                    <br><br>
                     <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Gudang Baja</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Assesment</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">BIM, Tekla, RAB</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">DED Arsitek, MEP</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-4 col-md-12">
-                    <h4>Follow Us</h4>
-                    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                    <h4 class="text-white">Follow Us</h4>
+                    <p class="text-white">Ikuti akun sosial media kami agar tidak ketinggalan info terkini !</p>
                     <div class="social-links d-flex">
                         <a href=""><i class="bi bi-twitter-x"></i></a>
                         <a href=""><i class="bi bi-facebook"></i></a>
@@ -1581,17 +1452,11 @@
             </div>
         </div>
 
-        <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">BizLand</strong> <span>All Rights Reserved</span>
+        <hr>
+        <div class="container text-center mt-4 ">
+            <p>© <span>Copyright</span> <span>2020-2024</span><strong class="px-1 sitename">MacroStruktur.id</strong>
+                <span>All Rights Reserved</span>
             </p>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you've purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
-                    href=“https://themewagon.com>ThemeWagon
-            </div>
         </div>
 
     </footer>
