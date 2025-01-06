@@ -5,8 +5,21 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Home - MacroStruktur</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Suplemen kesehatan untuk membantu memproteksi tubuh dari minyak jahat yang terdapat di makanan yang digoreng dan juga di makanan sehari-hari">
+	<meta name="keywords" content="Yuk Makan Enak Tanpa Worry!">
+
+	<meta name="author" content="Noil Official">
+
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://noil.co.id">
+	<meta property="og:site_name" content="Noil">
+	<meta property="og:title" content="Noil Official Website - Suplemen Kesehatan">
+	<meta property="og:description" content="Suplemen kesehatan untuk membantu memproteksi tubuh dari minyak jahat yang terdapat di makanan yang digoreng dan juga di makanan sehari-hari">
+	<meta name="theme-color" content="#FFFFFF">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Noil Official Website - Suplemen Kesehatan">
+	<meta name="twitter:description" content="Suplemen kesehatan untuk membantu memproteksi tubuh dari minyak jahat yang terdapat di makanan yang digoreng dan juga di makanan sehari-hari">
 
     <!-- Favicons -->
     <link href="assets_2/img/LOGO MACROSTRUKTUR 4.png" rel="icon">
@@ -108,7 +121,7 @@
                         <li><a href="#services">Testimoni</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         {{-- <li><a href="#team">Team</a></li> --}}
-                        <li><a href="{{ url('/artikel') }}">Artikel</a></li>
+                        <li><a href="{{ url('/list-artikel') }}">Artikel</a></li>
                         <li class="dropdown"><a href="#"><span>Jasa Layanan</span> <i
                                     class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>
@@ -332,6 +345,14 @@
                             <!-- Image 3 -->
                             <div class="col-sm-2" data-aos="fade-up" data-aos-delay="300">
                                 <img src="assets_2/img/sni-logo-6BC4A3F52A-seeklogo.com.png" alt="SNI Logo"
+                                    class="img-fluid">
+                            </div>
+                            <div class="col-sm-4" data-aos="fade-up" data-aos-delay="300">
+                                <img src="assets_2/img/AutoCAD-logo.png" alt="SNI Logo"
+                                    class="img-fluid">
+                            </div>
+                            <div class="col-sm-4" data-aos="fade-up" data-aos-delay="300">
+                                <img src="assets_2/img/autodesk-revit-1280x720.png" alt="SNI Logo"
                                     class="img-fluid">
                             </div>
                             <div class="row">

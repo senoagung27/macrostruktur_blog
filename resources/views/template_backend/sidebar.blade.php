@@ -1,12 +1,12 @@
 <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html">
+            <a href="{{ route('dasboard') }}">
               <img src="{{ asset('assets_2/img/Group 1.png') }}" alt="logo" class="img-fluid">
             </a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">
+            <a href="{{ route('dasboard') }}">
               <img src="{{ asset('assets_2/img/LOGO MACROSTRUKTUR 4.png') }}" alt="logo" class="img-fluid img-responsive" style="width: 40px;">
             </a>
           </div>
@@ -20,8 +20,8 @@
             <li class="dropdown">
               <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-book-open"></i> <span>Post</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="{{ route('post.index') }}">List Post</a></li> 
-                <li><a class="nav-link" href="{{ route('post.tampil_hapus') }}">List Post Dihapus</a></li>              
+                <li><a class="nav-link" href="{{ route('artikel.index') }}">List Post</a></li> 
+                {{-- <li><a class="nav-link" href="{{ route('post.tampil_hapus') }}">List Post Dihapus</a></li>               --}}
               </ul>
             </li>
             <li class="dropdown">
@@ -46,8 +46,8 @@
             <li class="dropdown">
               <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-book-open"></i> <span>Post</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="{{ route('post.index') }}">List Post</a></li> 
-                <li><a class="nav-link" href="{{ route('post.tampil_hapus') }}">List Post Dihapus</a></li>              
+                {{-- <li><a class="nav-link" href="{{ route('post.index') }}">List Post</a></li>  --}}
+                {{-- <li><a class="nav-link" href="{{ route('post.tampil_hapus') }}">List Post Dihapus</a></li>               --}}
               </ul>
             </li>
             <li class="dropdown">

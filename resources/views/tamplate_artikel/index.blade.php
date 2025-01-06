@@ -6,8 +6,22 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>UpConstruction Bootstrap Template - Blog</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta name="description" content="Suplemen kesehatan untuk membantu memproteksi tubuh dari minyak jahat yang terdapat di makanan yang digoreng dan juga di makanan sehari-hari">
+	<meta name="keywords" content="Yuk Makan Enak Tanpa Worry!">
+
+	<meta name="author" content="Noil Official">
+
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://noil.co.id">
+	<meta property="og:site_name" content="Noil">
+	<meta property="og:title" content="Noil Official Website - Suplemen Kesehatan">
+	<meta property="og:description" content="Suplemen kesehatan untuk membantu memproteksi tubuh dari minyak jahat yang terdapat di makanan yang digoreng dan juga di makanan sehari-hari">
+	<meta name="theme-color" content="#FFFFFF">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Noil Official Website - Suplemen Kesehatan">
+	<meta name="twitter:description" content="Suplemen kesehatan untuk membantu memproteksi tubuh dari minyak jahat yang terdapat di makanan yang digoreng dan juga di makanan sehari-hari">
+
 
     <!-- Favicons -->
     <link href="assets_3/assets/img/favicon.png" rel="icon">
@@ -32,15 +46,15 @@
     <link href="assets_3/assets/css/main.css" rel="stylesheet">
 
 
-     <!-- Vendor CSS Files -->
-     <link href="assets_2/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-     <link href="assets_2/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-     <link href="assets_2/assets/vendor/aos/aos.css" rel="stylesheet">
-     <link href="assets_2/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-     <link href="assets_2/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
- 
-     <!-- Main CSS File -->
-     <link href="assets_2/assets/css/main.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets_2/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets_2/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets_2/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets_2/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets_2/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets_2/assets/css/main.css" rel="stylesheet">
 
     <!-- =======================================================
   * Template Name: UpConstruction - v1.3.0
@@ -130,17 +144,18 @@
                         <li><a href="#services">Testimoni</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         {{-- <li><a href="#team">Team</a></li> --}}
-                        <li><a href="{{ url('/artikel') }}">Artikel</a></li>
+                        <li><a href="{{ url('/list-artikel') }}">Artikel</a></li>
                         <li class="dropdown"><a href="#"><span>Jasa Layanan</span> <i
                                     class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                    <ul>
-                                        <li><a href="{{ url('/layanan-detail/bangunan-gedung') }}">Bangunan Gedung</a></li>
-                                        <li><a href="{{ url('/layanan-detail/rumah-tinggal-ruko') }}">Rumah Tinggal/Ruko</a></li>
-                                        <li><a href="{{ url('/layanan-detail/bangunan-gudang') }}">Bangunan Gudang</a></li>
-                                        <li><a href="{{ url('/layanan-detail/assesment') }}">Assesment</a></li>
-                                        <li><a href="{{ url('/layanan-detail/bim-tekla-rab') }}">BIM, Tekla, RAB</a></li>
-                                        <li><a href="{{ url('/layanan-detail/ded-arsitek-mep') }}">DED Arsitek, MEP</a></li>
-                                    </ul>
+                            <ul>
+                                <li><a href="{{ url('/layanan-detail/bangunan-gedung') }}">Bangunan Gedung</a></li>
+                                <li><a href="{{ url('/layanan-detail/rumah-tinggal-ruko') }}">Rumah Tinggal/Ruko</a>
+                                </li>
+                                <li><a href="{{ url('/layanan-detail/bangunan-gudang') }}">Bangunan Gudang</a></li>
+                                <li><a href="{{ url('/layanan-detail/assesment') }}">Assesment</a></li>
+                                <li><a href="{{ url('/layanan-detail/bim-tekla-rab') }}">BIM, Tekla, RAB</a></li>
+                                <li><a href="{{ url('/layanan-detail/ded-arsitek-mep') }}">DED Arsitek, MEP</a></li>
+                            </ul>
                         </li>
                         <li><a href="#contact">Pricing</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -187,267 +202,76 @@
             <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                 <div class="row gy-4 posts-list">
-                    @foreach ($artikel as $slug => $details)
-                    <div class="col-xl-4 col-md-6">
-                        <div class="post-item position-relative h-100">
+                    @foreach ($data as $slug => $details)
+                        <div class="col-xl-4 col-md-6">
+                            <div class="post-item position-relative h-100">
 
-                            <div class="post-img position-relative overflow-hidden">
-                                <img src="assets_3/assets/img/blog/blog-1.jpg" class="img-fluid" alt="">
-                                {{-- <span class="post-date">December 12</span> --}}
-                                <span class="post-date">{{ \Carbon\Carbon::parse($details['date'])->format('F j') }}</span>
-                            </div>
-
-                            <div class="post-content d-flex flex-column">
-
-                                {{-- <h3 class="post-title">Dolorum optio tempore voluptas dignissimos cumque fuga qui
-                                    quibusdam quia</h3> --}}
-                                    <h3 class="post-title">{{ $details['title'] }}</h3>
-
-                                <div class="meta d-flex align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        {{-- <i class="bi bi-person"></i> <span class="ps-2">John Doe</span> --}}
-                                        <i class="bi bi-person"></i> <span class="ps-2">{{ $details['author'] }}</span>
-                                    </div>
-                                    <span class="px-3 text-black-50">/</span>
-                                    <div class="d-flex align-items-center">
-                                        {{-- <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span> --}}
-                                        <i class="bi bi-folder2"></i> <span class="ps-2">{{ $details['category'] }}</span>
-                                    </div>
+                                <div class="post-img position-relative overflow-hidden">
+                                    <img src="assets_3/assets/img/blog/blog-1.jpg" class="img-fluid" alt="">
+                                    {{-- <span class="post-date">December 12</span> --}}
+                                    <span
+                                        class="post-date">{{ \Carbon\Carbon::parse($details['date'])->format('F j') }}</span>
                                 </div>
 
-                                {{-- <p>
+                                <div class="post-content d-flex flex-column">
+
+                                    {{-- <h3 class="post-title">Dolorum optio tempore voluptas dignissimos cumque fuga qui
+                                    quibusdam quia</h3> --}}
+                                    <h3 class="post-title">{{ $details->judul }}</h3>
+
+                                    <div class="meta d-flex align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            {{-- <i class="bi bi-person"></i> <span class="ps-2">John Doe</span> --}}
+                                            <i class="bi bi-person"></i> <span
+                                                class="ps-2">{{ $details->users->name }}</span>
+                                        </div>
+                                        <span class="px-3 text-black-50">/</span>
+                                        <div class="d-flex align-items-center">
+                                            {{-- <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span> --}}
+                                            <i class="bi bi-folder2"></i> <span
+                                                class="ps-2">{{ $details->category->name }}</span>
+                                        </div>
+                                    </div>
+
+                                    {{-- <p>
                                     Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi
                                     praesentium. Aliquam et
                                     laboriosam eius aut nostrum quidem aliquid dicta.
                                 </p> --}}
-                                {{-- <p>
-                                    {{ Str::limit($artikel['content'], 150) }}
-                                </p> --}}
-                                @isset($artikel['content'])
-    {{ Str::limit($artikel['content'], 150) }}
+                                    <p>
+                                    <p>{!! Str::limit($details->content, 150) !!}</p>
+                                    </p>
+                                    {{-- @isset($details->content)
+    {{ Str::limit($details->content, 150) }}
 @else
     <p>Content not available.</p>
-@endisset
+@endisset --}}
 
-                                
 
-                                <hr>
 
-                                <a href="{{ url('/artikel-detail/' . $slug) }}" class="readmore stretched-link"><span>Read More</span><i
-                                        class="bi bi-arrow-right"></i></a>
+                                    <hr>
+
+                                    <a href="{{ url('/artikel-detail/' . $slug) }}"
+                                        class="readmore stretched-link"><span>Read More</span><i
+                                            class="bi bi-arrow-right"></i></a>
+
+                                </div>
 
                             </div>
-
-                        </div>
-                    </div><!-- End post list item -->
+                        </div><!-- End post list item -->
                     @endforeach
 
-                    <div class="col-xl-4 col-md-6">
-                        <div class="post-item position-relative h-100">
 
-                            <div class="post-img position-relative overflow-hidden">
-                                <img src="assets_3/assets/img/blog/blog-2.jpg" class="img-fluid" alt="">
-                                <span class="post-date">March 19</span>
-                            </div>
 
-                            <div class="post-content d-flex flex-column">
-
-                                <h3 class="post-title">Nisi magni odit consequatur autem nulla dolorem</h3>
-
-                                <div class="meta d-flex align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
-                                    </div>
-                                    <span class="px-3 text-black-50">/</span>
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-                                    </div>
-                                </div>
-
-                                <p>
-                                    Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum
-                                    voluptatum et. Quo
-                                    libero rerum voluptatem pariatur nam.
-                                </p>
-
-                                <hr>
-
-                                <a href="{{ url('/blog-details') }}" class="readmore stretched-link"><span>Read More</span><i
-                                        class="bi bi-arrow-right"></i></a>
-
-                            </div>
-
-                        </div>
-                    </div><!-- End post list item -->
-
-                    <div class="col-xl-4 col-md-6">
-                        <div class="post-item position-relative h-100">
-
-                            <div class="post-img position-relative overflow-hidden">
-                                <img src="assets_3/assets/img/blog/blog-3.jpg" class="img-fluid" alt="">
-                                <span class="post-date">June 24</span>
-                            </div>
-
-                            <div class="post-content d-flex flex-column">
-
-                                <h3 class="post-title">Possimus soluta ut id suscipit ea ut. In quo quia et soluta
-                                    libero sit sint.</h3>
-
-                                <div class="meta d-flex align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-person"></i> <span class="ps-2">Maria Doe</span>
-                                    </div>
-                                    <span class="px-3 text-black-50">/</span>
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-                                    </div>
-                                </div>
-
-                                <p>
-                                    Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem
-                                    dolorem labore omnis
-                                    et. Eum temporibus fugiat voluptate enim tenetur sunt omnis.
-                                </p>
-
-                                <hr>
-
-                                <a href="{{ url('/blog-details') }}" class="readmore stretched-link"><span>Read More</span><i
-                                        class="bi bi-arrow-right"></i></a>
-
-                            </div>
-
-                        </div>
-                    </div><!-- End post list item -->
-
-                    <div class="col-xl-4 col-md-6">
-                        <div class="post-item position-relative h-100">
-
-                            <div class="post-img position-relative overflow-hidden">
-                                <img src="assets_3/assets/img/blog/blog-4.jpg" class="img-fluid" alt="">
-                                <span class="post-date">August 05</span>
-                            </div>
-
-                            <div class="post-content d-flex flex-column">
-
-                                <h3 class="post-title">Non rem rerum nam cum quo minus. Dolor distinctio deleniti
-                                    explicabo eius
-                                    exercitationem.</h3>
-
-                                <div class="meta d-flex align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-person"></i> <span class="ps-2">Maria Doe</span>
-                                    </div>
-                                    <span class="px-3 text-black-50">/</span>
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-                                    </div>
-                                </div>
-
-                                <p>
-                                    Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem
-                                    veritatis rerum
-                                    enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
-                                </p>
-
-                                <hr>
-
-                                <a href="{{ url('/blog-details') }}" class="readmore stretched-link"><span>Read More</span><i
-                                        class="bi bi-arrow-right"></i></a>
-
-                            </div>
-
-                        </div>
-                    </div><!-- End post list item -->
-
-                    <div class="col-xl-4 col-md-6">
-                        <div class="post-item position-relative h-100">
-
-                            <div class="post-img position-relative overflow-hidden">
-                                <img src="assets_3/assets/img/blog/blog-5.jpg" class="img-fluid" alt="">
-                                <span class="post-date">September 17</span>
-                            </div>
-
-                            <div class="post-content d-flex flex-column">
-
-                                <h3 class="post-title">Accusamus quaerat aliquam qui debitis facilis consequatur</h3>
-
-                                <div class="meta d-flex align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-person"></i> <span class="ps-2">John Parker</span>
-                                    </div>
-                                    <span class="px-3 text-black-50">/</span>
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
-                                    </div>
-                                </div>
-
-                                <p>
-                                    In itaque assumenda aliquam voluptatem qui temporibus iusto nisi quia. Autem vitae
-                                    quas aperiam
-                                    nesciunt mollitia tempora odio omnis. Ipsa odit sit ut amet necessitatibus. Quo
-                                    ullam ut corrupti
-                                    autem consequuntur totam dolorem.
-                                </p>
-
-                                <hr>
-
-                                <a href="{{ url('/blog-details') }}" class="readmore stretched-link"><span>Read More</span><i
-                                        class="bi bi-arrow-right"></i></a>
-
-                            </div>
-
-                        </div>
-                    </div><!-- End post list item -->
-
-                    <div class="col-xl-4 col-md-6">
-                        <div class="post-item position-relative h-100">
-
-                            <div class="post-img position-relative overflow-hidden">
-                                <img src="assets_3/assets/img/blog/blog-6.jpg" class="img-fluid" alt="">
-                                <span class="post-date">December 07</span>
-                            </div>
-
-                            <div class="post-content d-flex flex-column">
-
-                                <h3 class="post-title">Distinctio provident quibusdam numquam aperiam aut</h3>
-
-                                <div class="meta d-flex align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-person"></i> <span class="ps-2">Julia White</span>
-                                    </div>
-                                    <span class="px-3 text-black-50">/</span>
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-                                    </div>
-                                </div>
-
-                                <p>
-                                    Expedita et temporibus eligendi enim molestiae est architecto praesentium dolores.
-                                    Illo laboriosam
-                                    officiis quis. Labore officia quia sit voluptatem nisi est dignissimos totam. Et
-                                    voluptate et
-                                    consectetur voluptatem id dolor magni impedit. Omnis dolores sit.
-                                </p>
-
-                                <hr>
-
-                                <a href="{{ url('/blog-details') }}" class="readmore stretched-link"><span>Read More</span><i
-                                        class="bi bi-arrow-right"></i></a>
-
-                            </div>
-
-                        </div>
-                    </div><!-- End post list item -->
 
                 </div><!-- End blog posts list -->
 
                 <div class="blog-pagination">
                     <ul class="justify-content-center">
-                        <li><a href="#">1</a></li>
-                        <li class="active"><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
+                        {{ $data->links() }}
                     </ul>
-                </div><!-- End blog pagination -->
+                </div>
+                
 
             </div>
         </section><!-- End Blog Section -->
@@ -649,19 +473,19 @@
     <!-- Template Main JS File -->
     <script src="assets_3/assets/js/main.js"></script>
 
-     <!-- Vendor JS Files -->
-     <script src="assets_2/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-     <script src="assets_2/assets/vendor/php-email-form/validate.js"></script>
-     <script src="assets_2/assets/vendor/aos/aos.js"></script>
-     <script src="assets_2/assets/vendor/glightbox/js/glightbox.min.js"></script>
-     <script src="assets_2/assets/vendor/waypoints/noframework.waypoints.js"></script>
-     <script src="assets_2/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-     <script src="assets_2/assets/vendor/swiper/swiper-bundle.min.js"></script>
-     <script src="assets_2/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-     <script src="assets_2/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
- 
-     <!-- Main JS File -->
-     <script src="assets_2/assets/js/main.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets_2/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets_2/assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets_2/assets/vendor/aos/aos.js"></script>
+    <script src="assets_2/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets_2/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets_2/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets_2/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets_2/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets_2/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets_2/assets/js/main.js"></script>
 
 </body>
 
