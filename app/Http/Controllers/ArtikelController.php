@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Posts;
 use App\Category;
 use App\Tags;
-use Auth;
+// use Auth;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class ArtikelController extends Controller
@@ -309,11 +310,14 @@ class ArtikelController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::all();
-        $tags = Tags::all();
-        $post = Posts::findorfail($id);
-        return view('admin.post.edit', compact('post','tags','category'));
+        $post = Posts::findOrFail($id); // Fetch the specific post by ID
+        $category = Category::all(); // Fetch all categories
+        $tags = Tags::all(); // Fetch all tags
+    
+        return view('admin.artikel.edit', compact('post', 'category', 'tags'));
     }
+    
+    
 
     /**
      * Update the specified resource in storage.
@@ -361,7 +365,7 @@ class ArtikelController extends Controller
         $post->update($post_data);
 
         
-        return redirect()->route('post.index')->with('success','Postingan anda berhasil diupdate'); 
+        return redirect()->route('artikel.index')->with('success','Postingan anda berhasil diupdate'); 
 
 
     }

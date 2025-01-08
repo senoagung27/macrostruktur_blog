@@ -50,8 +50,8 @@ Route::group(['middleware' => 'auth'], function(){
 	// Route::delete('/post/kill/{id}', 'PostController@kill')->name('post.kill');
 	// Route::resource('/post', 'PostController');
 
-	Route::get('/artikel', 'ArtikelController@index')->name('artikel.index');
-	Route::get('/artikel/create', 'ArtikelController@create')->name('artikel.create');
+	Route::get('/artikel', [ArtikelController::class, 'index'])->name('artikel.index');
+	Route::get('/artikel/create', [ArtikelController::class, 'create'])->name('artikel.create');
 	Route::post('/artikel/store', [ArtikelController::class, 'store'])->name('artikel.store');
 	Route::get('/artikel/edit/{id}', [ArtikelController::class, 'edit'])->name('artikel.edit');
 	Route::put('/artikel/update/{id}', [ArtikelController::class, 'update'])->name('artikel.update');

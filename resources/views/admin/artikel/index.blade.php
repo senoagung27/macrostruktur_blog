@@ -43,13 +43,13 @@
                 <td>{{ $hasil->meta_description }}</td>
                 <td>{{ $hasil->meta_keyword }}</td>
 				<td>
-					<form action="{{ route('artikel.destroy', $hasil->id )}}" method="POST">
-						@csrf
-						@method('delete')
-					<a href="{{ route('artikel.edit', $hasil->id ) }}" class="btn btn-primary btn-sm">Edit</a>
-					<button type="submit" class="btn btn-danger btn-sm">Delete</button>
-					</form>
-				</td>
+                    <form action="{{ route('artikel.destroy', $hasil->id) }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <a href="{{ route('artikel.edit', $hasil->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this article?')">Delete</button>
+                    </form>
+                </td>
 			</tr>
 			@endforeach
 

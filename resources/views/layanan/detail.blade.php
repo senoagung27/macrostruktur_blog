@@ -9,8 +9,8 @@
     <meta name="keywords" content="">
 
     <!-- Favicons -->
-    <link href="assets_2/assets/img/favicon.png" rel="icon">
-    <link href="assets_2/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets_2/img/LOGO MACROSTRUKTUR 4.png" rel="icon">
+    <link href="assets_2/img/LOGO MACROSTRUKTUR 4.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
