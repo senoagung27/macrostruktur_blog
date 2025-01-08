@@ -47,7 +47,7 @@ class CategoryController extends Controller
             'slug' => Str::slug($request->name)
         ]);
 
-        return redirect()->back()->with('success','Ketegori berhasil disimpan');
+        return redirect()->route('category.index')->with('success','Ketegori berhasil disimpan');
     }
 
     /**

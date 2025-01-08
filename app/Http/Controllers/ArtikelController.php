@@ -339,9 +339,13 @@ class ArtikelController extends Controller
         $post = Posts::findorfail($id);
 
         if ($request->has('gambar')) {
-            $gambar = $request->gambar;
-            $new_gambar = time().$gambar->getClientOriginalName();
-            $gambar->move('public/uploads/posts/', $new_gambar);
+            // $gambar = $request->gambar;
+            // $new_gambar = time().$gambar->getClientOriginalName();
+            // $gambar->move('public/uploads/posts/', $new_gambar);
+            $gambar = $request->file('gambar');
+            $new_gambar = time() . '_' . $gambar->getClientOriginalName();
+    
+            $gambar->move(public_path('public/uploads/posts/'), $new_gambar);
 
         $post_data = [
             'judul' => $request->judul,

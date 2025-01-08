@@ -57,7 +57,7 @@ class UserController extends Controller
                 'password' => $password
         ]);       
 
-        return redirect()->back()->with('success','User Berhasil Disimpan');
+        return redirect()->route('user.index')->with('success','User Berhasil Disimpan');
     }
 
     /**

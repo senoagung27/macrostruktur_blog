@@ -1,12 +1,21 @@
 @extends('template_backend.home')
 @section('sub-judul','Post')
 @section('content')
+@if (count($errors) > 0)
+@foreach ($errors->all() as $error)
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        {{ $error }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endforeach
+@endif
 
-    @if(Session::has('success'))
-  	<div class="alert alert-success" role="alert">
-      {{ Session('success') }}
-	</div> 
-	@endif
+@if (Session::has('success'))
+<div class="alert alert-success alert-dismissible" role="alert">
+    {{ Session('success') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
 
 	<a href="{{ route('artikel.create') }}" class="btn btn-info btn-sm">Tambah Post</a>
 	<br><br>
@@ -39,7 +48,13 @@
 					@endforeach		
 				</td>
 				<td>{{ $hasil->users->name }}</td>
-				<td><img src="{{ asset($hasil->gambar) }}" class="img-fluid" style="width:100px"></td>
+				{{-- <td><img src="{{ asset($hasil->gambar) }}" class="img-fluid" style="width:100px"></td> --}}
+                <td>
+                    <img src="{{ $hasil->gambar ? asset($hasil->gambar) : asset('assets/img/example-image-50.jpg') }}" 
+                         class="img-fluid" 
+                         style="width:100px">
+                </td>
+                
                 <td>{{ $hasil->meta_description }}</td>
                 <td>{{ $hasil->meta_keyword }}</td>
 				<td>

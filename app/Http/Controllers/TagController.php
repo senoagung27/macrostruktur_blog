@@ -46,7 +46,7 @@ class TagController extends Controller
             'slug' => Str::slug($request->name)
         ]);
 
-        return redirect()->back()->with('success','Data berhasil disimpan');
+        return redirect()->route('tag.index')->with('success','Data berhasil disimpan');
     }
 
     /**
