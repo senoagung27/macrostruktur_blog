@@ -21,26 +21,26 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assets_3/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets_3/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets_3/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="assets_3/assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets_3/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets_3/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="{{ asset('assets_3/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_3/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_3/assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_3/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_3/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_3/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets_3/assets/css/main.css" rel="stylesheet">
+    <link href="{{ asset('assets_3/assets/css/main.css') }}" rel="stylesheet">
 
 
       <!-- Vendor CSS Files -->
-      <link href="assets_2/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <link href="assets_2/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-      <link href="assets_2/assets/vendor/aos/aos.css" rel="stylesheet">
-      <link href="assets_2/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-      <link href="assets_2/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      <link href="{{ asset('assets_2/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+      <link href="{{ asset('assets_2/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+      <link href="{{ asset('assets_2/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+      <link href="{{ asset('assets_2/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+      <link href="{{ asset('assets_2/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
   
       <!-- Main CSS File -->
-      <link href="assets_2/assets/css/main.css" rel="stylesheet">
+      <link href="{{ asset('assets_2/assets/css/main.css') }}" rel="stylesheet">
 
     <!-- =======================================================
   * Template Name: UpConstruction - v1.3.0
@@ -691,16 +691,16 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
-    <script src="assets_3/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets_3/assets/vendor/aos/aos.js"></script>
-    <script src="assets_3/assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets_3/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets_3/assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets_3/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets_3/assets/vendor/php-email-form/validate.js"></script>
+    <script src="{{ asset('assets_3/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets_3/assets/vendor/aos/aos.js') }}"></script>
+    <script src="{{ asset('assets_3/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('assets_3/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets_3/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets_3/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+    <script src="{{ asset('assets_3/assets/vendor/php-email-form/validate.js') }}"></script>
 
     <!-- Template Main JS File -->
-    <script src="assets_3/assets/js/main.js"></script>
+    <script src="{{ asset('assets_3/assets/js/main.js') }}"></script>
 
 </body>
 
